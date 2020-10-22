@@ -30,7 +30,7 @@
           </div>
      </div>
      <div class="coontainer">
-           <p class="text-center">@desarrollo 506</p>
+           <p class="text-center">@desarrollo 505 && 506</p>
      </div>
   <script type="text/javascript">
   function verpass(cb){
