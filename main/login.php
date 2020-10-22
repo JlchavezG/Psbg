@@ -1,4 +1,6 @@
 <?php
+  // creamos una variable de sesion
+  error_reporting(0);
   session_start();
   include 'conecta.php';
   $usuario = $conecta->real_escape_string($_POST['usuario']);
@@ -20,7 +22,7 @@
          header("location:../principal.php");
      }
       else {
-        header("location:../Aplicacion1.php");
+          header("location:../Aplicacion1.php");
       }
     }     else{
        header("location:../Aplicacion1.php");
