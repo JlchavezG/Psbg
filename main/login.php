@@ -3,6 +3,7 @@
   error_reporting(0);
   session_start();
   include 'conecta.php';
+  // recuperar datos de el formulario login
   $usuario = $conecta->real_escape_string($_POST['usuario']);
   $password = $conecta->real_escape_string(md5($_POST['password']));
   // consulta para extraer los datos de la base de datos de el alumno
