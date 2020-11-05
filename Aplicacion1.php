@@ -4,6 +4,22 @@ error_reporting(0);
 session_start();
 $mensaje = "";
 include 'main/conecta.php';
+// se realiza la consulta para extraer los datos de genero;
+$genero = "SELECT * FROM Genero";
+$respuesta = $conecta->query($genero);
+// se realiza la consulta para extraer los datos carreras
+$carrera = "SELECT * FROM Carrera";
+$respuestasc = $conecta->query($carrera);
+// consulta para extraer lsop datos de semestres
+$semestre = "SELECT * FROM Semestre";
+$respuestass = $conecta->query($semestre);
+// consulta para extraer grupos
+$grupos = "SELECT * FROM Grupo";
+$respuestag = $conecta->query($grupos);
+// consulta para los planteles
+$planteles = "SELECT * FROM Plantel";
+$respuestap = $conecta->query($planteles);
+
   if (isset($_POST['ingreso'])) {
       $usuario = $_POST['usuario'];
       $password = md5($_POST['password']);
@@ -26,7 +42,7 @@ include 'main/conecta.php';
              // si son iguales podremos dar ingreso y crear la variablede sesion
              header("location:principal.php");}
                 else {
-                // de lo contrario mandaremos el mensaje de error con una alerta de bootstrap  
+                // de lo contrario mandaremos el mensaje de error con una alerta de bootstrap
                    $mensaje = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                  <strong>Usuario No registrado en el sistema</strong> por favor verifica tus datos o cumunicate a soporte.
                                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
@@ -41,6 +57,7 @@ include 'main/conecta.php';
                                   </button>
                                 </div>"; }
                   }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -105,13 +122,109 @@ include 'main/conecta.php';
                               </button>
                      </div>
                      <div class="modal-body">
-                               ...
+                               <div class="container">
+                                 <form action="registro.php" method="post" name="Formregistro" id="Formregistro">
+                                    <div class="form-row">
+                                      <div class="form-group col-md-12">
+                                          <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="apellidoP" required>
+                                      </div>
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                          <input type="text" name="apellidop" class="form-control" placeholder="Apellido Peterno" id="apellidoP" required>
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                          <input type="text" name="apellidom" class="form-control" placeholder="Apellido Materno" id="apellidoM" required>
+                                      </div>
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col-md-12">
+                                          <label for="apellidoP">Fecha de Nacimiento</label>
+                                          <input type="date" name="fecha" class="form-control"  id="apellidoP" required>
+                                      </div>
+                                    </div>
+                                    <div class="form-row">
+                                       <div class="form-group col-md-6">
+                                         <select class="custom-select my-1 mr-sm-2" name="genero" id="genero" required>
+                                            <option value="">Selecciona un Genero</option>
+                                                 <?php while($row = $respuesta->fetch_assoc()) { ?>
+                                                    <option value="<?php echo $row['Id_Genero'];?>"><?php echo $row['Nombre'];?></option>
+                                                 <?php } ?>
+                                         </select>
+                                       </div>
+                                       <div class="form-group col-md-6">
+                                         <input type="tel" name="telefono" class="form-control" name="telefono" placeholder="Telefono" required>
+                                       </div>
+                                    </div>
+                                    <div class="form-row">
+                                       <div class="form-group col-md-6">
+                                         <select class="custom-select my-1 mr-sm-2" name="carrera" id="carrera" required>
+                                            <option value="">Selecciona una carrera</option>
+                                            <?php while($row1 = $respuestasc->fetch_assoc()) { ?>
+                                               <option value="<?php echo $row1['Id_Carrera'];?>"><?php echo $row1['NombreC'];?></option>
+                                            <?php } ?>
+                                         </select>
+                                       </div>
+                                       <div class="form-group col-md-6">
+                                         <select class="custom-select my-1 mr-sm-2" name="semestre" id="semestre" required>
+                                            <option value="">Selecciona el Semestre</option>
+                                            <?php while($row2 = $respuestass->fetch_assoc()) { ?>
+                                               <option value="<?php echo $row2['Id_Semestre'];?>"><?php echo $row2['NombreS'];?></option>
+                                            <?php } ?>
+                                         </select>
+                                       </div>
+                                    </div>
+                                    <div class="form-row">
+                                       <div class="form-group col-md-6">
+                                         <select class="custom-select my-1 mr-sm-2" name="grupo" id="grupo" required>
+                                             <option value="">Selecciona el Grupo</option>
+                                             <?php while($row3 = $respuestag->fetch_assoc()) { ?>
+                                                <option value="<?php echo $row3['Id_Grupo'];?>"><?php echo $row3['Nombre'];?></option>
+                                             <?php } ?>
+                                         </select>
+                                       </div>
+                                       <div class="form-group col-md-6">
+                                         <select class="custom-select my-1 mr-sm-2" name="plantel" id="plantel" required>
+                                            <option value="">Selecciona un plantel</option>
+                                                <?php while($row4 = $respuestap->fetch_assoc()) { ?>
+                                                   <option value="<?php echo $row4['Id_Plantel'];?>"><?php echo $row4['Nombre'];?></option>
+                                                <?php } ?>
+                                         </select>
+                                       </div>
+                                    </div>
+                                    <div class="form-row">
+                                       <div class="form-group col-md-12">
+                                          <input type="text" name="usuario" class="form-control" placeholder="Usuario" required>
+                                       </div>
+                                    </div>
+                                    <div class="form-row">
+                                       <div class="form-group col-md-12">
+                                          <input type="password" name="passwors" class="form-control" placeholder="Password" required>
+                                       </div>
+                                    </div>
+                                    <div class="form-row">
+                                       <div class="form-group col-md-12">
+                                          <input type="text" name="password2" class="form-control" placeholder="Confirma Password" required>
+                                       </div>
+                                    </div>
+                               </div>
+                               <div class="form-row">
+                                  <div class="form-group col-md-12">
+                                     <label for="imagen">Selecciona una Imagen de Perfil</label>
+                                     <input type="file" name="imagen" class="form-control" required>
+                                  </div>
+                               </div>
+                               <div class="custom-control custom-switch justify-content-right h-100">
+                                  <input type="checkbox" class="custom-control-input" name="checkbox" id="checkbox" onclick="habilitar();">
+                                  <label for="checkbox" class="custom-control-label">Acepto Terminos y Condiciones</label>
+                               </div>
                      </div>
                      <div class="modal-footer">
                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                         <button type="button" class="btn btn-primary"> Registrarse</button>
+                         <input type="submit" name="submit" value="Registrar" class="btn btn-success" disabled>
                      </div>
-                </div>
+                    </div>
+                  </form>
           </div>
      </div>
      <!-- termina la integración de la ventana modal -->
@@ -122,6 +235,9 @@ include 'main/conecta.php';
        else
        $('#pass').attr("type","password");
   }
+   function habilitar(){
+      document.Formregistro.submit.disabled = !document.Formregistro.checkbox.checked;
+   }
   </script>
   <script src="js/bootstrap.min.js"></script>
   </body>
