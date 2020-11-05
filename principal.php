@@ -20,7 +20,7 @@ if (!isset($usuario)) {
     <?php include 'main/sidebar.php';?>
     <div id="page-content-wrapper">
       <?php include 'main/navbar_principal.php';?>
-      <h4 class="text-center display-3"> Dashboard</h4>
+      <h4 class="text-center display-4"> Dashboard</h4>
 
 
     </div>
