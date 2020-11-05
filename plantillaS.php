@@ -21,9 +21,7 @@ if (!isset($usuario)) {
     <div id="page-content-wrapper">
       <?php include 'main/navbar_principal.php';?>
       <h4 class="text-center display-4 py-2"> Dashboard</h4>
-         <div class="container">
-             <?php include 'main/ejemplo.html'; ?>
-         </div>
+
     </div>
   <script src="js/bootstrap.min.js"></script>
   <script>

@@ -20,10 +20,8 @@ if (!isset($usuario)) {
     <?php include 'main/sidebar.php';?>
     <div id="page-content-wrapper">
       <?php include 'main/navbar_principal.php';?>
-      <h4 class="text-center display-4 py-2"> Dashboard</h4>
-         <div class="container">
-             <?php include 'main/ejemplo.html'; ?>
-         </div>
+      <h4 class="text-center display-4 py-2"> Registros</h4>
+
     </div>
   <script src="js/bootstrap.min.js"></script>
   <script>
