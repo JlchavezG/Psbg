@@ -1,7 +1,5 @@
-
 <?php
 error_reporting(0);
-session_start();
 $mensaje = "";
 include 'main/conecta.php';
 // se realiza la consulta para extraer los datos de genero;
@@ -43,22 +41,22 @@ $respuestap = $conecta->query($planteles);
              header("location:principal.php");}
                 else {
                 // de lo contrario mandaremos el mensaje de error con una alerta de bootstrap
-                   $mensaje = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                   $mensaje.= "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                  <strong>Usuario No registrado en el sistema</strong> por favor verifica tus datos o cumunicate a soporte.
                                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                  </button>
                                </div>"; }
                   } else {
-                    $mensaje = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                    $mensaje.= "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                   <strong>Usuario No cuentas con permisos</strong> por favor verifica tus datos o cumunicate a soporte.
                                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                      <span aria-hidden='true'>&times;</span>
                                   </button>
                                 </div>"; }
                   }
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -78,7 +76,7 @@ $respuestap = $conecta->query($planteles);
                <div class="container text-center">
                  <img src="img/logo-metal-iscjlchavezg.png" alt="logo-iscjlchavez" class="logo">
                  <div class="py-2">
-                 <form class="form-group" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="py-2">
+                 <form class="form-group" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="py-2">
                         <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
                         <br>
                         <input type="password" class="form-control" name="password" id="pass" placeholder="Password" required>
@@ -123,7 +121,7 @@ $respuestap = $conecta->query($planteles);
                      </div>
                      <div class="modal-body">
                                <div class="container">
-                                 <form action="registro.php" method="post" name="Formregistro" id="Formregistro">
+                                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="Formregistro" id="Formregistro">
                                     <div class="form-row">
                                       <div class="form-group col-md-12">
                                           <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="apellidoP" required>
@@ -199,20 +197,15 @@ $respuestap = $conecta->query($planteles);
                                     </div>
                                     <div class="form-row">
                                        <div class="form-group col-md-12">
-                                          <input type="password" name="passwors" class="form-control" placeholder="Password" required>
+                                          <input type="password" name="pass" class="form-control" placeholder="Password" id="pass" onblur="" required>
                                        </div>
+                                       <div id="strengthMessage"></div>
                                     </div>
                                     <div class="form-row">
                                        <div class="form-group col-md-12">
-                                          <input type="text" name="password2" class="form-control" placeholder="Confirma Password" required>
+                                          <input type="password" name="Cpass" class="form-control" placeholder="Confirma Password" id="Cpass" required>
                                        </div>
                                     </div>
-                               </div>
-                               <div class="form-row">
-                                  <div class="form-group col-md-12">
-                                     <label for="imagen">Selecciona una Imagen de Perfil</label>
-                                     <input type="file" name="imagen" class="form-control" required>
-                                  </div>
                                </div>
                                <div class="custom-control custom-switch justify-content-right h-100">
                                   <input type="checkbox" class="custom-control-input" name="checkbox" id="checkbox" onclick="habilitar();">
