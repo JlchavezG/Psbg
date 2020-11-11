@@ -76,7 +76,7 @@
                                   <p class="text-muted"><span class="icon-award-empty"></span> ¿Olvidaste tu Password?</p>
                              </div>
                              <div class="col">
-                               <a href="#" class="text-muted text-decoration-none"> <span class="icon-user-add"></span>Registrate </a>
+                               <a href="Nregistro.php" class="text-muted text-decoration-none"> <span class="icon-user-add"></span>Registrate </a>
                              </div>
                        </div>
                  </div>
