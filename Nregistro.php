@@ -1,3 +1,18 @@
+<?php
+error_reporting(0);
+include 'main/conecta.php';
+// consultas para extrar los datos de los select
+// consulta tabla genero
+$g = "SELECT * FROM Genero ORDER BY Id_Genero";
+$respuesta = $conecta->query($g);
+//consulta tabla carrera
+$c = "SELECT * FROM Carrera ORDER BY Id_Carrera";
+$respuestasc = $conecta->query($c);
+//consulta tabla semestre
+$s = "SELECT * FROM Semestre ORDER BY Id_Semestre";
+$respuestass = $conecta->query($s);
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,16 +23,13 @@
   </head>
   <body>
     <!-- integración de ventana modal de registro de usuario -->
-    <div class="modal fade" id="RegistroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered">
-               <div class="modal-content">
-                    <div class="modal-header">
-                             <h5 class="modal-title" id="exampleModalLabel"> Registro de Usuario</h5>
-                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                 <span aria-hidden="true">&times;</span>
-                             </button>
+    <div class="container py-4">
+         <div class="card">
+               <div class="card-content">
+                    <div class="card-header">
+                             <h5> Registro de Usuario</h5>
                     </div>
-                    <div class="modal-body">
+                    <div class="card-body">
                               <div class="container">
                                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="Formregistro" id="Formregistro">
                                    <div class="form-row">
@@ -44,7 +56,7 @@
                                         <select class="custom-select my-1 mr-sm-2" name="genero" id="genero" required>
                                            <option value="">Selecciona un Genero</option>
                                                 <?php while($row = $respuesta->fetch_assoc()) { ?>
-                                                   <option value="<?php echo $row['Id_Genero'];?>"><?php echo $row['Nombre'];?></option>
+                                                   <option value="<?php echo $row['Id_Genero'];?>"><?php echo $row['NombreG'];?></option>
                                                 <?php } ?>
                                         </select>
                                       </div>
