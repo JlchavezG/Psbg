@@ -35,6 +35,21 @@ if (isset($_POST['registro'])) {
       }
       else {
       // recuperar los datos para el registro
+      $nombre = $conecta->real_escape_string($_POST['nombre']);
+      $apellido1 = $conecta->real_escape_string($_POST['apellidop']);
+      $apellido2 = $conecta->real_escape_string($_POST['apellidom']);
+      $fechaN = $conecta->real_escape_string($_POST['fecha']);
+      $genero = $conecta->real_escape_string($_POST['genero']);
+      $telefono = $conecta->real_escape_string($_POST['telefono']);
+      $carrera = $conecta->real_escape_string($_POST['carrera']);
+      $semestre = $conecta->real_escape_string($_POST['semestre']);
+      $grupo = $conecta->real_escape_string($_POST['grupo']);
+      $plantel = $conecta->real_escape_string($_POST['plantel']);
+      $nick = $conecta->real_escape_string($_POST['usuario']);
+      $contra = $conecta->real_escape_string(md5($_POST['pass']));
+
+      $estado = 'Activo';
+
 
       }
     $conecta->close();
@@ -60,7 +75,7 @@ if (isset($_POST['registro'])) {
              <div class="card col-sm-8 col-md-6 col-lg-6 shadow-lg p-3 mb-5 bg-white rounded">
                   <p class="text-center text-muted py-3"> Registro de Usuario en la plataforma</p><hr>
                   <div class="container text-center">
-                      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="Formregistro" id="Formregistro">
+                      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" name="Formregistro" id="Formregistro" enctype="multipart/form-data">
                            <div class="form-row">
                                <div class="form-group col-md-12">
                                  <input type="text" name="nombre" class="form-control" placeholder="Nombre" id="apellidoP" required>
