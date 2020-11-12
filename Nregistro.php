@@ -35,7 +35,7 @@ if (isset($_POST['registro'])) {
       }
       else {
       // recuperar los datos para el registro
-        
+
       }
     $conecta->close();
 }
@@ -143,6 +143,11 @@ if (isset($_POST['registro'])) {
                                <div class="form-group col-md-12">
                                    <input type="password" name="Cpass" class="form-control" placeholder="Confirma Password" id="Cpass" required>
                                </div>
+                           </div>
+                           <div class="form-row">
+                             <div class="form-group col-md-12">
+                                 <input type="file" name="imagen" class="form-control" id="imagen" required>
+                             </div>
                            </div>
                            <div class="custom-control custom-switch justify-content-right h-100">
                                <input type="checkbox" class="custom-control-input" name="checkbox" id="checkbox" onclick="habilitar();">

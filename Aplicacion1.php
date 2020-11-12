@@ -5,12 +5,17 @@
         if(isset($_POST['ingreso'])){
         $usuario = $_POST['usuario'];
         $password = md5($_POST['password']);
+        // verificamos que exista la variable de sesion de el contador
+        if (!isset($_SESSION['contador'])) {
+           $_SESSION['contador'] == 0;
+        }
         // consulta para ingresar al sistema y determinar la variable de session
-        $q = "SELECT * FROM Alumnos WHERE Usuario = '$usuario' and Password = '$password'";
+        $q = "SELECT * FROM Alumnos WHERE Usuario = '$usuario' and Password = '$password' and Estado = 'Activo'";
         if ($resultado = $conecta->query($q)) {
           while ($row = $resultado->fetch_array()) {
             $userok = $row['Usuario'];
             $passwordok = $row['Password'];
+            $id = $row['Id_Alumnos'];
           }
             $resultado->close();
           }
@@ -19,14 +24,31 @@
              if ($usuario == $userok && $password == $passwordok) {
                  $_SESSION['loguin']= TRUE;
                  $_SESSION['Usuario'] = $usuario;
-                 header("location:principal.php");}
+                 header("location:principal.php");
+               }
                  else {
+                   // asignamos un valor mas al contador de la sesion
+                   $_SESSION['contador'] = $_SESSION['contador'] + 1;
+                   // comprobar los 3 intentos
+                   if ( $_SESSION['contador'] > 3) {
+                     $actualizar = "UPDATE Alumnos SET Estado = 'Inactivo' WHERE Id_Alumnos = '$id'";
+                     $update = $conecta->query($actualizar);
+                     $mensaje1.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                                   <strong>Usuario Invalidado</strong> Por favor comunicate con el área de soporte.
+                                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                                      <span aria-hidden='true'>&times;</span>
+                                   </button>
+                                 </div>";
+                   }
+                   // si son menos de 3 intentos
+                   else{
                    $mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
-                                 <strong>Usuario no valido</strong> El usuario no seencuatra registrado en el sistema consulta a soporte.
+                                 <strong>Usuario no valido</strong> El usuario no se encuatra registrado en el sistema consulta a soporte.
                                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                  </button>
                                </div>";
+                             }
                }
                  } else {
                    $mensaje.="<div class='alert alert-warning alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
@@ -88,6 +110,7 @@
            <p class="text-center">IscjlchavezG@desarrollo 505 && 506 Programación Gestor de base de datos</p>
            <div class="py-2">
                <?php echo $mensaje; ?>
+               <?php echo $mensaje1; ?>
            </div>
      </div>
   <script type="text/javascript">
