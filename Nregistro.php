@@ -12,7 +12,7 @@
      <div class="container text-center py-4">
           <div class="col-sm-8 col-md-8 col-lg-8">
             <div class="card justify-content-center align-items-center vh-100">
-                 hola
+                Registro
             </div>
           </div>
      </div>

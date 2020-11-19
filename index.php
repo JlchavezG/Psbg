@@ -3,8 +3,8 @@
         session_start();
         include 'main/conecta.php';
         if(isset($_POST['ingreso'])){
-        $usuario = $_POST['usuario'];
-        $password = md5($_POST['password']);
+        $usuario = $conecta->real_escape_string($_POST['usuario']);
+        $password = $conecta->real_escape_string(md5($_POST['password']));
         // verificamos que exista la variable de sesion de el contador
         if (!isset($_SESSION['contador'])) {
            $_SESSION['contador'] == 0;
