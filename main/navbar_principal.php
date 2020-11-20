@@ -1,3 +1,5 @@
+<?php
+$fecha = date("d/m/Y"); ?>
 <!-- navbar de la pagina -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
   <span class="icon-sliders" id="menu-toggle"> Menú</span>
@@ -12,11 +14,11 @@
         <a class="nav-link" href="#">Sistemas <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Fecha : </a>
+        <a class="nav-link" href="#">Fecha : <?php echo $fecha;?></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Usuario:  <?php echo $usuario; ?>  <img src="img/perfil/yo.jpg" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
+          Bienvenido:  <?php echo $user['Nombre'] ?>  <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"><span class="icon-user"></span> Perfil</a>
