@@ -7,6 +7,32 @@ $usuario = $_SESSION['Usuario'];
 if (!isset($usuario)) {
    header("location:Aplicacion1.php");
 }
+// consulta para extraer todos los campo de el usuario en la sesion
+$Q= "SELECT * FROM Alumnos WHERE Usuario = '".$usuario."'";
+$extraer = $conecta->query($Q);
+$dupla = $extraer->fetch_array();
+if ($dupla > 0) {
+  $user = $dupla;
+}
+// validacion de expirar sesion por tiempo
+if (isset($_SESSION['time'])) {
+   // damos el timepo en segundo para determinar cuando expira la sesion
+   $inactivo = 120; // 2 minutos
+   // se calcula el tiempo inactivo ene l aplicativo
+   $tiempo = time() - $_SESSION['time'];
+   // verificamos si el tiempo pasa lo establecido para cerrar la sesion y redirigir
+   if ($tiempo > $inactivo) {
+     //Olvidamos la Sesion
+     session_unset();
+     //destruimos la session
+     session_destroy();
+     //redirigimos ala pagina principal de login
+     header("location:index.php");
+     exit();
+   }
+}
+$_SESSION['time'] = time();
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
