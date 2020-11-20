@@ -1,6 +1,41 @@
 <?php
+  error_reporting(0);
   include 'main/conecta.php';
   include 'main/configreg.php';
+  // Inicia proceso de registro
+  // validamos que se presione al boton registro
+  if (isset($_POST['submit'])) {
+  // variables de password para validarlos
+  $pass = $conecta->real_escape_string($_POST['pass']);
+  $cpass = $conecta->real_escape_string($_POST['cpass']);
+    if ($pass != $cpass) {
+      $mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                    <strong>Password no Coinciden</strong> Por favor verifica tus password que sean iguales.
+                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                       <span aria-hidden='true'>&times;</span>
+                    </button>
+                  </div>";
+    }
+    else {
+  // recuperamos los valores que nos da el usuario
+  $nombre = $conecta->real_escape_string($_POST['nombre']);
+  $apellidop = $conecta->real_escape_string($_POST['apellidop']);
+  $apellidom = $conecta->real_escape_string($_POST['apellidom']);
+  $f_nac = $conecta->real_escape_string($_POST['fecha']);
+  $gen = $conecta->real_escape_string($_POST['genero']);
+  $telefono = $conecta->real_escape_string($_POST['telefono']);
+  $carrera = $conecta->real_escape_string($_POST['carrera']);
+  $semestre = $conecta->real_escape_string($_POST['semestre']);
+  $grupo = $conecta->real_escape_string($_POST['grupo']);
+  $plantel = $conecta->real_escape_string($_POST['plantel']);
+  $usern = $conecta->real_escape_string($_POST['user']);
+  $img = "user.png";
+  $estado = "Activo";
+  // consulta para insertar registro en la base de datos
+
+
+    }
+  }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -25,7 +60,7 @@
                    <hr>
                    <p class="text-success text-center">Digita los datos solicitados</p>
                       <!-- formulario de registro -->
-                      <form name="Fregistro" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="registro">
+                      <form name="Fregistro" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="registro" enctype="multipart/form-data">
                         <div class="row">
                           <div class="col">
                              <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
@@ -108,12 +143,6 @@
                                   <input type="password" name="cpass" class="form-control"  placeholder="Conforma tu Password" required>
                              </div>
                            </div>
-                           <div class="row py-2">
-                             <div class="col">
-                              <label for="imagen">Selecciona una imagen de perfil</label>
-                              <input type="file" name="imagen" required>
-                            </div>
-                           </div>
                            <div class="row py-1">
                               <div class="col">
                                  <div class="custom-control custom-switch">
@@ -128,6 +157,7 @@
                       </form>
                       <!-- termina registro -->
                    </article>
+                   <?php echo $mensaje; ?>
             </div>
         </div>
         <div class="row">
