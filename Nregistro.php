@@ -29,9 +29,22 @@
   $grupo = $conecta->real_escape_string($_POST['grupo']);
   $plantel = $conecta->real_escape_string($_POST['plantel']);
   $usern = $conecta->real_escape_string($_POST['user']);
+  $passw = md5($pass);
   $img = "user.png";
   $estado = "Activo";
   // consulta para insertar registro en la base de datos
+  $reg = "INSERT INTO Alumnos(Nombre, ApellidoP, ApellidoM, F_Nacimiento, Id_Genero, Telefono, Id_Carrera, Id_Semestre, Id_Grupo,
+  Id_Plantel, Usuario, Password, Img, Estado)VALUES('$nombre','$apellidop','$apellidom','$f_nac','$gen','$telefono','$carrera','$semestre',
+  '$grupo','$plantel','$usern','$passw','$img','$estado')";
+  $registro = $conecta->query($reg);
+   if ($registro > 0) {
+     $mensaje.="<div class='alert alert-success alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                   <strong>Registro Exitoso</strong> Ya puedes iniciar sesión con tus credenciales <a href='index.php'>Click para iniciar sesion</a> .
+                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                      <span aria-hidden='true'>&times;</span>
+                   </button>
+                 </div>";
+   }
 
 
     }
@@ -54,7 +67,7 @@
     <!-- inicio de contenedor -->
     <div class="container py-4">
         <div class="row justify-content-center h-100 py-4">
-          <div class="card col-sm-6 col-md-6 col-lg-6 shadow-lg p-3 mb-5 bg-white rounded">
+          <div class="card col-sm-8 col-md-8 col-lg-8 shadow-lg p-3 mb-5 bg-white rounded">
                <article class="card-body">
                    <h4 class="card-title text-center"> Registro de Usuario</h4>
                    <hr>
