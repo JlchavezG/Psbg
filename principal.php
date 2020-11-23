@@ -5,7 +5,7 @@ session_start();
 // validando usuario
 $usuario = $_SESSION['Usuario'];
 if (!isset($usuario)) {
-   header("location:Aplicacion1.php");
+   header("location:principal.php");
 }
 // consulta para extraer todos los campo de el usuario en la sesion
 $Q= "SELECT * FROM Alumnos WHERE Usuario = '".$usuario."'";

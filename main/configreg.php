@@ -16,4 +16,5 @@ $plantel = "SELECT * FROM Plantel ORDER BY Id_Plantel";
 $resultado4 = $conecta->query($plantel);
 
 
+
  ?>
