@@ -15,11 +15,10 @@
   border-bottom: 2px solid #ccc;
   background: transparent;
   width: 100%;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
-.caja:focus, .caja:focus {
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
+.caja:focus{
+
 }
