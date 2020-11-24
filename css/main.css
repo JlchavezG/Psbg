@@ -8,3 +8,17 @@
   border: 2px solid blue;
   border-radius: 50%;
 }
+.caja{
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  width: 100%;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.caja:focus{
+
+}

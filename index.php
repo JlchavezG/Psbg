@@ -86,16 +86,19 @@
           <h3 class="text-center py-4"> Inicio de Sesion IscjlchavezG</h3>
        <div class="row justify-content-center h-100 py-4">
           <div class="card col-sm-8 col-md-6 col-lg-6 shadow-lg p-3 mb-5 bg-white rounded">
-               <p class="text-center text-muted py-3"> Por Favor ingresa tu Usuario y Password</p><hr>
+               <p class="text-center text-muted py-3"><span class="icon-lock"><span> Inicio de Sesión</p><hr>
                <div class="container text-center">
                  <img src="img/logo-metal-iscjlchavezg.png" alt="logo-iscjlchavez" class="logo">
                  <div class="py-2">
                  <form class="form-group" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="py-2">
-                        <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
-                        <br>
-                        <input type="password" class="form-control" name="password" id="pass" placeholder="Password" required>
-                        <br>
-                        <div class="container">
+                   <div class="container">
+                      <div class="row py-2">
+                        <input type="text" class="caja" name="usuario" placeholder="Usuario" required>
+                      </div>
+                      <div class="row py-2">
+                        <input type="password" class="caja" name="password" id="pass" placeholder="Password" required>
+                     </div>
+                     <div class="container">
                         <div class="row">
                              <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="ver" onclick="verpass(this);">
@@ -103,8 +106,11 @@
                              </div>
                         </div>
                       </div>
+                      <div class="row py-2">
                         <input type="submit" name="ingreso" value="Ingresar" class="btn btn-success btn-sm btn-block">
+                      </div>  
                  </form>
+                 </div>
                     <hr>
                        <div class="row">
                              <div class="col">
