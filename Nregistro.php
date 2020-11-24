@@ -35,6 +35,18 @@
   $passw = md5($pass);
   $img = "user.png";
   $estado = "Activo";
+  // consulta para verificar si exite un email igual dentro de la base de datos
+  $nuevo = "SELECT * FROM Alumnos WHERE Email = '$email' or Usuario = '$usern'";
+  $new = $conecta->query($nuevo);
+  // validacion de el criterio de aceptacion
+  if($new->num_rows > 0){
+    $mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                  <strong>El usuario y/o Email ya existe</strong> El registro ya existe en la base de datos por favor <a href='index.php'>Click para iniciar sesion</a> .
+                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                     <span aria-hidden='true'>&times;</span>
+                  </button>
+                </div>";
+  } else {
   // consulta para insertar registro en la base de datos
   $reg = "INSERT INTO Alumnos(Nombre, ApellidoP, ApellidoM, F_Nacimiento, Id_Genero, Telefono, Id_Carrera, Id_Semestre, Id_Grupo,
   Id_Plantel, Email, Usuario, Password, Img, Estado)VALUES('$nombre','$apellidop','$apellidom','$f_nac','$gen','$telefono','$carrera','$semestre',
@@ -43,16 +55,16 @@
   // verificamos que el registro sea valido para mandar una alerta
    if ($registro > 0) {
      $mensaje.="<div class='alert alert-success alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
-                   <strong>Registro Exitoso</strong> Ya puedes iniciar sesión con tus credenciales <a href='index.php'>Click para iniciar sesion</a> .
+                   <strong>Registro Exitoso</strong> Ya puedes iniciar sesión con tus credenciales <a href='index.php' class='text-muted text-decoration-none'>Click para iniciar sesion</a> .
                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                       <span aria-hidden='true'>&times;</span>
                    </button>
                  </div>";
-   }
-
-
-    }
+              }
+          }
+      }
   }
+  $conecta->close();
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
