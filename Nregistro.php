@@ -8,6 +8,7 @@
   // variables de password para validarlos
   $pass = $conecta->real_escape_string($_POST['pass']);
   $cpass = $conecta->real_escape_string($_POST['cpass']);
+  // verificamos si los password son diferentes
     if ($pass != $cpass) {
       $mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                     <strong>Password no Coinciden</strong> Por favor verifica tus password que sean iguales.
@@ -16,6 +17,7 @@
                     </button>
                   </div>";
     }
+  // de lo contrario recuperamos los datos de el usuario a travez de las cajas de texto por el metodo post
     else {
   // recuperamos los valores que nos da el usuario
   $nombre = $conecta->real_escape_string($_POST['nombre']);
@@ -28,15 +30,17 @@
   $semestre = $conecta->real_escape_string($_POST['semestre']);
   $grupo = $conecta->real_escape_string($_POST['grupo']);
   $plantel = $conecta->real_escape_string($_POST['plantel']);
+  $email = $conecta->real_escape_string($_POST['email']);
   $usern = $conecta->real_escape_string($_POST['user']);
   $passw = md5($pass);
   $img = "user.png";
   $estado = "Activo";
   // consulta para insertar registro en la base de datos
   $reg = "INSERT INTO Alumnos(Nombre, ApellidoP, ApellidoM, F_Nacimiento, Id_Genero, Telefono, Id_Carrera, Id_Semestre, Id_Grupo,
-  Id_Plantel, Usuario, Password, Img, Estado)VALUES('$nombre','$apellidop','$apellidom','$f_nac','$gen','$telefono','$carrera','$semestre',
-  '$grupo','$plantel','$usern','$passw','$img','$estado')";
+  Id_Plantel, Email, Usuario, Password, Img, Estado)VALUES('$nombre','$apellidop','$apellidom','$f_nac','$gen','$telefono','$carrera','$semestre',
+  '$grupo','$plantel','$email','$usern','$passw','$img','$estado')";
   $registro = $conecta->query($reg);
+  // verificamos que el registro sea valido para mandar una alerta
    if ($registro > 0) {
      $mensaje.="<div class='alert alert-success alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                    <strong>Registro Exitoso</strong> Ya puedes iniciar sesión con tus credenciales <a href='index.php'>Click para iniciar sesion</a> .
@@ -139,6 +143,11 @@
                                     <option value="<?php echo $row4['Id_Plantel']; ?>"><?php echo $row4['NombreP']; ?></option>
                                    <?php } ?>
                                 </select>
+                              </div>
+                           </div>
+                           <div class="row py-2">
+                              <div class="col">
+                                  <input type="text" name="email" class="form-control" placeholder="Email" required>
                               </div>
                            </div>
                            <div class="row py-2">
