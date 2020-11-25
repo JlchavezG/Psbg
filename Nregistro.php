@@ -188,7 +188,7 @@
                               <div class="col">
                                  <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" name="checkbox" id="checkbox" onclick="habilitar();">
-                                    <label for="checkbox" class="custom-control-label">Acepto Terminos y Condiciones</label>
+                                    <label for="checkbox" class="custom-control-label"><a href="#" class="text-muted text-decoration-none" data-toggle="modal" data-target="#staticBackdrop">Acepto Terminos y Condiciones</label>
                                  </div>
                               </div>
                            </div>
@@ -201,6 +201,8 @@
                    <?php echo $mensaje; ?>
             </div>
         </div>
+        <!-- ventana modal de politicas de privacidad -->
+        <?php include 'main/politicas.php'; ?>
         <div class="row">
            <div class="col-sm-12 col-md12 col-lg-12 text-center">
               <img src="img/firma.png" alt="">
