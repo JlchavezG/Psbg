@@ -20,5 +20,8 @@
   -webkit-box-shadow: none;
 }
 .caja:focus{
-
+ border-bottom: 2px solid green;
+ outline:none !important;
+ outline-width: 0 !important;
+ transition: 1s;
 }

@@ -53,11 +53,13 @@ $_SESSION['time'] = time();
     <div id="page-content-wrapper">
     <!-- incluir a hora navbar -->
       <?php include 'main/navbar_principal.php';?>
+   <div class="container py-4">
       <h4 class="text-center display-4 py-2"> Dahsboard</h4>
          <div class="container">
-             <?php include 'main/ejemplo.html'; ?>
+             <?php include 'main/dashboard.php'; ?>
          </div>
     </div>
+  </div>
   <script src="js/bootstrap.min.js"></script>
   <script>
   $("#menu-toggle").click(function(e) {

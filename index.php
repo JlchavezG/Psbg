@@ -83,7 +83,7 @@
   </head>
   <body>
      <div class="container py-4">
-          <h3 class="text-center py-4"> Inicio de Sesion IscjlchavezG</h3>
+          <h3 class="text-center py-4"><span class="icon-users"></span> Inicio de Sesion</h3>
        <div class="row justify-content-center h-100 py-4">
           <div class="card col-sm-8 col-md-6 col-lg-6 shadow-lg p-3 mb-5 bg-white rounded">
                <p class="text-center text-muted py-3"><span class="icon-lock"><span> Inicio de Sesión</p><hr>
@@ -108,7 +108,7 @@
                       </div>
                       <div class="row py-2">
                         <input type="submit" name="ingreso" value="Ingresar" class="btn btn-success btn-sm btn-block">
-                      </div>  
+                      </div>
                  </form>
                  </div>
                     <hr>
@@ -124,16 +124,16 @@
                </div>
           </div>
         </div>
+        <div class="py-1">
+            <?php echo $mensaje; ?>
+            <?php echo $mensaje1; ?>
+        </div>
         <div class="row justify-content-center align-items-center">
            <img src="img/firma.png" alt="firma jose luis chavez g">
         </div>
      </div>
      <div class="container py-2">
-           <p class="text-center">IscjlchavezG@desarrollo 505 && 506 Programación Gestor de base de datos</p>
-           <div class="py-2">
-               <?php echo $mensaje; ?>
-               <?php echo $mensaje1; ?>
-           </div>
+           <p class="text-center">IscjlchavezG@desarrollorWeb</p>
      </div>
   <script type="text/javascript">
   function verpass(cb){
