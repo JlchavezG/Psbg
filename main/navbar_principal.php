@@ -24,10 +24,30 @@ $fecha = date("d/m/Y"); ?>
           <a class="dropdown-item" href="#"><span class="icon-user"></span> Perfil</a>
           <a class="dropdown-item" href="#"><span class="icon-calendar-2"></span> Historial</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="main/cerrar.php"><span class="icon-off-1"></span> Cerrar Sesion</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
         </div>
       </li>
     </ul>
   </div>
 </nav>
 <!-- temina navbar -->
+<!--ventana modal cerrar sesion -->
+<div class="modal" tabindex="-1" id="Modalcerrar">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"><span class="icon-off"></span> Cerrar Sesion </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>¿Deceas cerrar la sesión? <?php echo $user['Nombre']; ?></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <a href="main/cerrar.php" class="btn btn-danger">Cerrar Sesión</a>
+      </div>
+    </div>
+  </div>
+</div>
