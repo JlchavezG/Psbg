@@ -188,7 +188,7 @@
                               <div class="col">
                                  <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" name="checkbox" id="checkbox" onclick="habilitar();">
-                                    <label for="checkbox" class="custom-control-label"><a href="#" class="text-muted text-decoration-none" data-toggle="modal" data-target="#staticBackdrop">Acepto Terminos y Condiciones</label>
+                                    <label for="checkbox" class="custom-control-label"><a href="#" class="text-muted text-decoration-none" data-toggle="modal" data-target="#staticBackdrop">Acepto Terminos y Condiciones</label></a>
                                  </div>
                               </div>
                            </div>
