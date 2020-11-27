@@ -21,8 +21,8 @@ $fecha = date("d/m/Y"); ?>
           Bienvenido:  <?php echo $user['Nombre'] ?>  <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#"><span class="icon-user"></span> Perfil</a>
-          <a class="dropdown-item" href="#"><span class="icon-calendar-2"></span> Historial</a>
+          <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
+          <a class="dropdown-item" href="historial.php"><span class="icon-calendar-2"></span> Historial</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
         </div>
