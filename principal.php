@@ -1,11 +1,11 @@
-<!-- incluir la base de datos conexcion -->
+<!-- incluir la base de datos -->
 <?php include 'main/conecta.php';
 // guardar sesion
 session_start();
 // validando usuario
 $usuario = $_SESSION['Usuario'];
 if (!isset($usuario)) {
-   header("location:principal.php");
+   header("location:index.php");
 }
 // consulta para extraer todos los campo de el usuario en la sesion
 $Q= "SELECT * FROM Alumnos WHERE Usuario = '".$usuario."'";
@@ -14,10 +14,11 @@ $dupla = $extraer->fetch_array();
 if ($dupla > 0) {
   $user = $dupla;
 }
+
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
-   $inactivo = 120; // 2 minutos
+   $inactivo = 300; // 5 minutos
    // se calcula el tiempo inactivo ene l aplicativo
    $tiempo = time() - $_SESSION['time'];
    // verificamos si el tiempo pasa lo establecido para cerrar la sesion y redirigir
@@ -52,7 +53,7 @@ $_SESSION['time'] = time();
     <?php include 'main/sidebar.php';?>
     <div id="page-content-wrapper">
     <!-- incluir a hora navbar -->
-      <?php include 'main/navbar_principal.php';?>
+    <?php include 'main/navbar_principal.php';?>
    <div class="container py-4">
       <h4 class="text-center display-4 py-2"> Dahsboard</h4>
          <div class="container">
