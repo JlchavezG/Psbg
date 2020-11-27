@@ -18,7 +18,7 @@ $fecha = date("d/m/Y"); ?>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Bienvenido:  <?php echo $user['Nombre'] ?>  <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
+          Bienvenido:  <?php echo $user['Nombre'] ?> <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
@@ -42,7 +42,7 @@ $fecha = date("d/m/Y"); ?>
         </button>
       </div>
       <div class="modal-body">
-        <p>¿Deceas cerrar la sesión? <?php echo $user['Nombre']; ?></p>
+        <p>¿Deceas cerrar la sesión? <?php echo $user['Nombre']; ?> <?php echo $user['ApellidoP']; ?> <?php echo $user['ApellidoM']; ?></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
