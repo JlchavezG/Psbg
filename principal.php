@@ -1,5 +1,6 @@
 <!-- incluir la base de datos -->
 <?php include 'main/conecta.php';
+      include 'main/configreg.php';
 // guardar sesion
 session_start();
 // validando usuario
@@ -14,7 +15,6 @@ $dupla = $extraer->fetch_array();
 if ($dupla > 0) {
   $user = $dupla;
 }
-
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
