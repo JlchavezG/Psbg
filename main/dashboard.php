@@ -2,15 +2,15 @@
     <div class="row py-4 text-center">
        <div class="col">
             <!-- tarjetas -->
-            <div class="card mb-3 shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 540px;">
+            <div class="card bg-primary mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
                 <div class="row no-gutters">
                    <div class="col-md-4">
-                      <h3 class="display-4">5</h3>
+                      <h3 class="display-4 text-light"><?php echo $contar; ?></h3>
                    </div>
                    <div class="col-md-8">
                        <div class="card-body">
-                          <h5 class="card-title">Usuarios</h5>
-                          <p class="card-text"><small class="text-muted">Registro en Plataforma</small></p>
+                          <h5 class="card-title text-light">Alumnos</h5>
+                          <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                        </div>
                   </div>
                </div>
@@ -19,15 +19,15 @@
        </div>
        <div class="col">
          <!-- tarjetas -->
-         <div class="card mb-3 shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 540px;">
+         <div class="card bg-info mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
              <div class="row no-gutters">
                 <div class="col-md-4">
-                   <h3 class="display-4">0</h3>
+                   <h3 class="display-4 text-light"><?php echo $contar1; ?></h3>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                       <h5 class="card-title">Titulo</h5>
-                       <p class="card-text"><small class="text-muted">Registro en Plataforma</small></p>
+                       <h5 class="card-title text-light">Carreras</h5>
+                       <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                     </div>
                </div>
             </div>
@@ -36,15 +36,15 @@
        </div>
        <div class="col">
          <!-- tarjetas -->
-         <div class="card mb-3 shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 540px;">
+         <div class="card bg-dark mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
              <div class="row no-gutters">
                 <div class="col-md-4">
-                   <h3 class="display-4">0</h3>
+                   <h3 class="display-4 text-light"><?php echo $contar2; ?></h3>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                       <h5 class="card-title">Titulo</h5>
-                       <p class="card-text"><small class="text-muted">Registro en Plataforma</small></p>
+                       <h5 class="card-title text-light">Modulos</h5>
+                       <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                     </div>
                </div>
             </div>
@@ -56,15 +56,15 @@
        <div class="row py-1 text-center">
            <div class="col">
              <!-- tarjetas -->
-             <div class="card mb-3 shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 540px;">
+             <div class="card bg-warning mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
                  <div class="row no-gutters">
                     <div class="col-md-4">
-                       <h3 class="display-4">0</h3>
+                       <h3 class="display-4 text-light"><?php echo $contar5; ?></h3>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title">Titulo</h5>
-                           <p class="card-text"><small class="text-muted">Registro en Plataforma</small></p>
+                           <h5 class="card-title text-light">Parciales</h5>
+                           <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                         </div>
                    </div>
                 </div>
@@ -73,15 +73,15 @@
            </div>
            <div class="col">
              <!-- tarjetas -->
-             <div class="card mb-3 shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 540px;">
+             <div class="card bg-success mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
                  <div class="row no-gutters">
                     <div class="col-md-4">
-                       <h3 class="display-4">0</h3>
+                       <h3 class="display-4 text-light"><?php echo $contar4; ?></h3>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title">Titulo</h5>
-                           <p class="card-text"><small class="text-muted">Registro en Plataforma</small></p>
+                           <h5 class="card-title text-light">Grupos</h5>
+                           <p class="card-text"><small class="text-light">En Plataforma</small></p>
                         </div>
                    </div>
                 </div>
@@ -90,15 +90,15 @@
            </div>
            <div class="col">
              <!-- tarjetas -->
-             <div class="card mb-3 shadow-lg p-3 mb-5 bg-white rounded" style="max-width: 540px;">
+             <div class="card bg-secondary  mb-3 shadow-lg p-3 mb-5  rounded" style="max-width: 540px;">
                  <div class="row no-gutters">
                     <div class="col-md-4">
-                       <h3 class="display-4">0</h3>
+                       <h3 class="display-4 text-light"><?php echo $contar3; ?></h3>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title">Titulo</h5>
-                           <p class="card-text"><small class="text-muted">Registro en Plataforma</small></p>
+                           <h5 class="card-title text-light">Planteles</h5>
+                           <p class="card-text"><small class="text-light">Registros en Plataforma</small></p>
                         </div>
                    </div>
                 </div>
