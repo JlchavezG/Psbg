@@ -9,7 +9,7 @@ if (!isset($usuario)) {
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title> Inicio de Sistema | 505 and 506</title>
+    <title> Registro de Usuario | 505 and 506 and Dual</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -19,9 +19,8 @@ if (!isset($usuario)) {
   <body>
     <?php include 'main/sidebar.php';?>
     <div id="page-content-wrapper">
-      <?php include 'main/navbar_principal.php';?>
-      <h4 class="text-center display-4 py-2"> Registros</h4>
-
+    <?php include 'main/navbar_principal.php';?>
+    <h4 class="text-center display-4 py-2"> Registros</h4>
     </div>
   <script src="js/bootstrap.min.js"></script>
   <script>

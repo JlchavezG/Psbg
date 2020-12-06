@@ -41,7 +41,7 @@
                    // asignamos un valor mas al contador de la sesion
                    $_SESSION['contador'] = $_SESSION['contador'] + 1;
                    // comprobar los 3 intentos
-                   if ( $_SESSION['contador'] > 3) {
+                   if ( $_SESSION['contador'] > 2) {
                      $actualizar = "UPDATE Alumnos SET Estado = 'Inactivo' WHERE Id_Alumnos = '$id'";
                      $update = $conecta->query($actualizar);
                      $mensaje1.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
