@@ -10,11 +10,11 @@ $contar1 = $resultado1->num_rows;
 $semestre = "SELECT * FROM Semestre ORDER BY Id_Semestre";
 $resultado2 = $conecta->query($semestre);
 // consulta para extraer los datos de la tabla grupo
-$grupo = "SELECT * FROM Grupo ORDER BY Id_Grupo";
+$grupo = "SELECT * FROM Grupo ORDER BY Nombre";
 $resultado3 = $conecta->query($grupo);
 $contar4 = $resultado3->num_rows;
 // consulta para extraer los datos de la tabla plantel
-$plantel = "SELECT * FROM Plantel ORDER BY Id_Plantel";
+$plantel = "SELECT * FROM Plantel ORDER BY NombreP";
 $resultado4 = $conecta->query($plantel);
 $contar3 = $resultado4->num_rows;
 // consulta para saber cuantos alumnos existen en la plataforma
