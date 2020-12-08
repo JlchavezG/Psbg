@@ -39,7 +39,7 @@
   // validacion de el criterio de aceptacion
   if($new->num_rows > 0){
     $mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
-                  <strong>El usuario y/o Email ya existe</strong> El registro ya existe en la base de datos por favor <a href='index.php'>Click para iniciar sesion</a> .
+                  <strong>El Usuario y/o Email ya Existe</strong> Por favor verifica tus datos ó <a href='index.php' class='text-muted text-decoration-none'>Click para iniciar sesion</a> .
                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                      <span aria-hidden='true'>&times;</span>
                   </button>

@@ -40,7 +40,7 @@ $_SESSION['time'] = time();
   <head>
     <!-- utilizar cdn -->
     <meta charset="utf-8">
-    <title> Inicio de Sistema | IscjlchavezG</title>
+    <title> Inicio de Sistema | Perfilde Usuario</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -55,9 +55,9 @@ $_SESSION['time'] = time();
     <!-- incluir a hora navbar -->
     <?php include 'main/navbar_principal.php';?>
    <div class="container py-4">
-      <h4 class="text-center display-4 py-2"> Dahsboard</h4>
+      <p class="text-center py-2"> Perfil de Usuario</p>
          <div class="container">
-             <?php include 'main/dashboard.php'; ?>
+
          </div>
     </div>
   </div>
