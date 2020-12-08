@@ -21,6 +21,10 @@ $contar3 = $resultado4->num_rows;
 $alumnos = "SELECT * FROM Alumnos";
 $al = $conecta->query($alumnos);
 $contar = $al->num_rows;
+// consulta para saber cuantos alumnos existen en la plataforma
+$usuarios = "SELECT * FROM Usuarios";
+$user = $conecta->query($usuarios);
+$contar6 = $user->num_rows;
 // consulta para saber cuantos modulos tenemos registrados en la base de datos
 $modulo = "SELECT * FROM Modulos";
 $mod = $conecta->query($modulo);
@@ -29,4 +33,9 @@ $contar2 = $mod->num_rows;
 $parcial = "SELECT * FROM Parcial";
 $par = $conecta->query($parcial);
 $contar5 = $par->num_rows;
+// consulta para extraer los tipos de usuarios
+$tuser = "SELECT * FROM Tusuario";
+$t = $conecta->query($tuser);
+$contar7 = $t->num_rows;
+
  ?>

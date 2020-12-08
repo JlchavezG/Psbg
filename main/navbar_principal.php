@@ -20,7 +20,7 @@ $fecha = date("d/m/Y"); ?>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <?php echo $user['Nombre'] ?> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
+        <?php echo $user['Nombre'] ?> &nbsp;<span class="icon-cog"></span> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
@@ -28,6 +28,15 @@ $fecha = date("d/m/Y"); ?>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
         </div>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="icon-bell-alt"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="icon-facebook-rect"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="icon-twitter"></span></a>
       </li>
     </ul>
   </div>
