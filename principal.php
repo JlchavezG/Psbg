@@ -9,7 +9,7 @@ if (!isset($usuario)) {
    header("location:index.php");
 }
 // consulta para extraer todos los campo de el usuario en la sesion
-$Q= "SELECT * FROM Alumnos WHERE Usuario = '".$usuario."'";
+$Q= "SELECT * FROM Usuarios WHERE Usuario = '".$usuario."'";
 $extraer = $conecta->query($Q);
 $dupla = $extraer->fetch_array();
 if ($dupla > 0) {

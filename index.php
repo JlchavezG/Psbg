@@ -16,13 +16,13 @@
            $_SESSION['contador'] == 0;
         }
         // consulta para ingresar al sistema y determinar la variable de session
-        $q = "SELECT * FROM Alumnos WHERE Usuario = '$usuario' and Password = '$password' and Estado = 'Activo'";
+        $q = "SELECT * FROM Usuarios WHERE Usuario = '$usuario' and Password = '$password' and Estado = 'Activo'";
         // comparo que los datos se encuentren y se guarden en las variables userok y passwordok
         if ($resultado = $conecta->query($q)) {
           while ($row = $resultado->fetch_array()) {
             $userok = $row['Usuario'];
             $passwordok = $row['Password'];
-            $id = $row['Id_Alumnos'];
+            $id = $row['Id_Usuarios'];
           }
           // cierro consulta
             $resultado->close();
@@ -42,7 +42,7 @@
                    $_SESSION['contador'] = $_SESSION['contador'] + 1;
                    // comprobar los 3 intentos
                    if ( $_SESSION['contador'] > 2) {
-                     $actualizar = "UPDATE Alumnos SET Estado = 'Inactivo' WHERE Id_Alumnos = '$id'";
+                     $actualizar = "UPDATE Usuarios SET Estado = 'Inactivo' WHERE Id_Alumnos = '$id'";
                      $update = $conecta->query($actualizar);
                      $mensaje1.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                    <strong>Usuario Invalidado</strong> Por favor comunicate con el área de soporte.
@@ -117,7 +117,7 @@
                                   <p class="text-muted"><span class="icon-award-empty"></span> ¿Olvidaste tu Password?</p>
                              </div>
                              <div class="col">
-                               <a href="Nregistro.php" class="text-muted text-decoration-none"><span class="icon-user-add"></span>Registrate </a>
+                               <a href="NregistroUser.php" class="text-muted text-decoration-none"><span class="icon-user-add"></span>Registrate </a>
                              </div>
                        </div>
                  </div>

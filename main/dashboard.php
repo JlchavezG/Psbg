@@ -5,11 +5,11 @@
             <div class="card bg-primary mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
                 <div class="row no-gutters">
                    <div class="col-md-4">
-                      <h3 class="display-4 text-light"><?php echo $contar; ?></h3>
+                      <h3 class="display-4 text-light"> <?php echo $contar; ?></h3>
                    </div>
                    <div class="col-md-8">
                        <div class="card-body">
-                          <h5 class="card-title text-light">Alumnos</h5>
+                          <h5 class="card-title text-light"> <span class="icon-graduation-cap"> Alumnos</h5>
                           <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                        </div>
                   </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                       <h5 class="card-title text-light">Carreras</h5>
+                       <h5 class="card-title text-light"><span class="icon-cubes"></span> Carreras</h5>
                        <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                     </div>
                </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                       <h5 class="card-title text-light">Modulos</h5>
+                       <h5 class="card-title text-light"><span class="icon-pin"></span> Modulos</h5>
                        <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                     </div>
                </div>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title text-light">Parciales</h5>
+                           <h5 class="card-title text-light"><span class="icon-book"></span> Parciales</h5>
                            <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
                         </div>
                    </div>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title text-light">Grupos</h5>
+                           <h5 class="card-title text-light"><span class="icon-users-1"></span> Grupos</h5>
                            <p class="card-text"><small class="text-light">En Plataforma</small></p>
                         </div>
                    </div>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title text-light">Planteles</h5>
+                           <h5 class="card-title text-light"><span class="icon-map-signs"></span> Planteles</h5>
                            <p class="card-text"><small class="text-light">Registros en Plataforma</small></p>
                         </div>
                    </div>
@@ -112,7 +112,7 @@
             <div class="card bg-dark mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
                 <div class="row no-gutters">
                    <div class="col-md-4">
-                      <h3 class="display-4 text-light"><?php echo $contar2; ?></h3>
+                      <h3 class="display-4 text-light"><?php echo $contar6; ?></h3>
                    </div>
                    <div class="col-md-8">
                        <div class="card-body">
@@ -129,12 +129,12 @@
             <div class="card bg-info mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
                 <div class="row no-gutters">
                    <div class="col-md-4">
-                      <h3 class="display-4 text-light"><?php echo $contar2; ?></h3>
+                      <h3 class="display-4 text-light"><?php echo $contar7; ?></h3>
                    </div>
                    <div class="col-md-8">
                        <div class="card-body">
-                          <h5 class="card-title text-light">Modulos</h5>
-                          <p class="card-text"><small class="text-light">Registro en Plataforma</small></p>
+                          <h5 class="card-title text-light">Tipos de Usuarios</h5>
+                          <p class="card-text"><small class="text-light">Registrados en Plataforma</small></p>
                        </div>
                   </div>
                </div>
