@@ -164,8 +164,14 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="row py-1">
+                           <div class="row py-2">
                                  <input type="submit" name="submit" value="registrar" class="btn btn-sm btn-block btn-success" disabled>
+                           </div>
+                           <div class="row">
+                              <div class="col text-center">
+                                  <hr>
+                                  <img src="img/logo-metal-iscjlchavezg.png" alt="Logo iscjlchavezg" width="100px" height="100px">
+                              </div>
                            </div>
                       </form>
                       <!-- termina registro -->
@@ -176,7 +182,7 @@
         <!-- ventana modal de politicas de privacidad -->
         <?php include 'main/politicas.php'; ?>
         <div class="row">
-           <div class="col-sm-12 col-md12 col-lg-12 text-center">
+           <div class="col-sm-12 col-md-12 col-lg-12 text-center">
               <img src="img/firma.png" alt="">
              <p class="text-center text-muted"> Desarrollo iscjlchavezg@2020 by Developer</p>
            </div>

@@ -19,7 +19,7 @@ $fecha = date("d/m/Y"); ?>
           <a class="dropdown-item" href="#"><span class="icon-calendar-2"></span> Calendario</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <?php echo $user['Nombre'] ?> &nbsp;<span class="icon-cog"></span> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
