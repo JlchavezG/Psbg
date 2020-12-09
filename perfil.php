@@ -57,7 +57,7 @@ $_SESSION['time'] = time();
    <div class="container py-4">
       <p class="text-center py-2"> Perfil de Usuario</p>
          <div class="container">
-
+          
          </div>
     </div>
   </div>
