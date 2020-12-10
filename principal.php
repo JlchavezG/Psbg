@@ -47,6 +47,7 @@ $_SESSION['time'] = time();
     <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
     <!-- mandamos llamar jquery -->
     <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- script -->
   </head>
   <body>
     <!-- incluyendo la pagina siderbar.php -->
@@ -54,9 +55,7 @@ $_SESSION['time'] = time();
     // declara una variable
     $Tdash = $user['Id_Tusuario'];
     // validar o comparar el tipo de dato para determinar la accion
-    if($Tdash == 1){include 'main/sidebarS.php';}
-    else if($Tdash == 2){include 'main/sidebarA.php';}
-    else if($Tdash == 3){include 'main/sidebarU.php';}
+    if($Tdash == 1){include 'main/sidebarS.php';} else if($Tdash == 2){include 'main/sidebarA.php';} else if($Tdash == 3){include 'main/sidebarU.php';}
      ?>
     <div id="page-content-wrapper">
     <!-- incluir a hora navbar -->
