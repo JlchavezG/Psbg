@@ -62,9 +62,9 @@ $_SESSION['time'] = time();
     <!-- incluir a hora navbar -->
     <?php include 'main/navbar_principal.php';?>
    <div class="container py-4">
-      <h4 class="text-center display-4 py-2"> Dahsboard</h4>
+      <h4 class="text-center display-4 py-2"> titulo</h4>
          <div class="container">
-             <?php  include 'main/dashboard.php'; ?>
+             <!-- aqui va tu pagina que deceas trabajar -->
          </div>
     </div>
   </div>

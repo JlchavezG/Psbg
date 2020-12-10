@@ -50,14 +50,21 @@ $_SESSION['time'] = time();
   </head>
   <body>
     <!-- incluyendo la pagina siderbar.php -->
-    <?php include 'main/sidebar.php';?>
+    <?php
+    // declara una variable
+    $Tdash = $user['Id_Tusuario'];
+    // validar o comparar el tipo de dato para determinar la accion
+    if($Tdash == 1){include 'main/sidebarS.php';}
+    else if($Tdash == 2){include 'main/sidebarA.php';}
+    else if($Tdash == 3){include 'main/sidebarU.php';}
+     ?>
     <div id="page-content-wrapper">
     <!-- incluir a hora navbar -->
     <?php include 'main/navbar_principal.php';?>
    <div class="container py-4">
-      <p class="text-center py-2"> Perfil de Usuario</p>
+      <h4 class="text-center py-2">Perfil de Usuario</h4>
          <div class="container">
-          
+           <?php include 'main/perfil.php'; ?>
          </div>
     </div>
   </div>
