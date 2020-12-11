@@ -1,19 +1,17 @@
 <?php
-// realizar la consulta INNER JOIN
 $inner = "SELECT u.Id_Usuarios, u.Nombre, u.ApellidoP, u.ApellidoM, u.F_Nacimiento, u.Id_Genero, u.Telefono, u.Id_Plantel, u.Id_Tusuario, u.Email, u.Usuario,
 u.Password, u.Img, u.Estado, g.Id_Genero, g.NombreG, p.Id_Plantel, p.NombreP, t.Id_Tusuario, t.TNombre FROM Usuarios as u INNER JOIN Genero as g ON u.Id_Genero = g.Id_Genero
- INNER JOIN Plantel as p ON u.Id_Plantel = p.Id_Plantel INNER JOIN Tusuario as t ON u.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
+INNER JOIN Plantel as p ON u.Id_Plantel = p.Id_Plantel INNER JOIN Tusuario as t ON u.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
 $join = $conecta->query($inner);
 $imprimir = $join->fetch_array();
-?>
-
+ ?>
 <div class="container" id="perfil">
     <div class="row py-4 text-center">
         <div class="col-sm-10 col-md-10 col-lg-12">
           <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen perfil de usaurio" style="width:250px;" class="rounded-circle">
         </div>
     </div><hr>
-    <h3 class="text-center"><?php echo $user['Nombre']; echo "&nbsp;".$user['ApellidoP']; echo "&nbsp;".$user['ApellidoM']; ?></h3>
+    <h3 class="text-center"><?php echo $user['Nombre']; echo "&nbsp".$user['ApellidoP']; echo "&nbsp".$user['ApellidoM']; ?></h3>
     <div class="row py-4">
         <div class="col-sm-7 col-md-7 col-lg-7">
             <div class="card">
