@@ -64,7 +64,7 @@ $_SESSION['time'] = time();
    <div class="container py-4">
       <h4 class="text-center display-4 py-2"> titulo</h4>
          <div class="container">
-             <!-- aqui va tu pagina que deceas trabajar -->
+             <!-- aqui va tu pagina que deceas colocar -->
          </div>
     </div>
   </div>
