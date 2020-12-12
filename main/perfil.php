@@ -45,6 +45,12 @@ $imprimir = $join->fetch_array();
           </div>
         </div>
     </div>
+    <div class="row">
+       <div class="col-sm-12 col-md12 col-lg-12 text-center">
+          <img src="img/firma.png" alt="">
+         <p class="text-center text-muted"> Desarrollo iscjlchavezg@2020 by Developer</p>
+       </div>
+    </div>
 </div>
 <script type="text/javascript">
    function imprimir(){

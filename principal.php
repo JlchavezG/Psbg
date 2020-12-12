@@ -14,7 +14,10 @@ $extraer = $conecta->query($Q);
 $dupla = $extraer->fetch_array();
 if ($dupla > 0) {
   $user = $dupla;
+  $on1 = $user['Id_Usuarios'];
 }
+$on = "UPDATE Usuarios SET Online = '1' WHERE Id_Usuarios = $on1";
+$line = $conecta->query($on);
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion

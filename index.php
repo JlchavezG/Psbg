@@ -5,6 +5,7 @@
         session_start();
         // mandar o solicitar la conexion a bd
         include 'main/conecta.php';
+        include 'main/configreg.php';
         // validar que se presiono el boton de ingreso
         if(isset($_POST['ingreso'])){
         // rescatar obtener los datos de la caja de texto usuario y password de el formulario
@@ -22,7 +23,6 @@
           while ($row = $resultado->fetch_array()) {
             $userok = $row['Usuario'];
             $passwordok = $row['Password'];
-            $id = $row['Id_Usuarios'];
           }
           // cierro consulta
             $resultado->close();
@@ -42,8 +42,8 @@
                    $_SESSION['contador'] = $_SESSION['contador'] + 1;
                    // comprobar los 3 intentos
                    if ( $_SESSION['contador'] > 2) {
-                     $actualizar = "UPDATE Usuarios SET Estado = 'Inactivo' WHERE Id_Alumnos = '$id'";
-                     $update = $conecta->query($actualizar);
+                     $on = "UPDATE Usuarios SET Estado = 'Inactivo' WHERE Usuario = $userok";
+                     $line = $conecta->query($on);
                      $mensaje1.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                    <strong>Usuario Invalidado</strong> Por favor comunicate con el área de soporte.
                                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
@@ -63,7 +63,7 @@
                }
                  } else {
                    $mensaje.="<div class='alert alert-warning alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
-                                 <strong>Usuario no valido</strong> El usuario no seencuatra registrado en el sistema consulta a soporte.
+                                 <strong>Usuario no valido</strong> El usuario no se encuatra registrado en el sistema consulta a soporte.
                                  <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                     <span aria-hidden='true'>&times;</span>
                                  </button>
