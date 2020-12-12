@@ -1,6 +1,6 @@
 <?php
 $inner = "SELECT u.Id_Usuarios, u.Nombre, u.ApellidoP, u.ApellidoM, u.F_Nacimiento, u.Id_Genero, u.Telefono, u.Id_Plantel, u.Id_Tusuario, u.Email, u.Usuario,
-u.Password, u.Img, u.Estado, g.Id_Genero, g.NombreG, p.Id_Plantel, p.NombreP, t.Id_Tusuario, t.TNombre FROM Usuarios as u INNER JOIN Genero as g ON u.Id_Genero = g.Id_Genero
+u.Password, u.Img, u.Estado, g.Id_Genero, g.NombreG, p.Id_Plantel, p.NombreP, p.Direccion, p.Telefono, t.Id_Tusuario, t.TNombre FROM Usuarios as u INNER JOIN Genero as g ON u.Id_Genero = g.Id_Genero
 INNER JOIN Plantel as p ON u.Id_Plantel = p.Id_Plantel INNER JOIN Tusuario as t ON u.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
 $join = $conecta->query($inner);
 $imprimir = $join->fetch_array();
@@ -22,6 +22,7 @@ $imprimir = $join->fetch_array();
                       <li class="list-group-item"><b><span class="icon-users"></span> Genero:</b>&nbsp;<?php echo $imprimir['NombreG']; ?></li>
                       <li class="list-group-item"><b><span class="icon-sitemap"></span> Tipo de Usuario:&nbsp;</b><?php echo $imprimir['TNombre']; ?></li>
                       <li class="list-group-item"><b><span class="icon-map-signs"></span> Plantel:</b>&nbsp;<?php echo $imprimir['NombreP']; ?></li>
+                      <li class="list-group-item"><b><span class="icon-map-o"></span> Direccion:</b>&nbsp;<?php echo $imprimir['Direccion']; ?></li>
                       <li class="list-group-item"><b><span class="icon-envelope-open"></span> Email:</b>&nbsp;<?php echo $user['Email']; ?></li>
                     </ul>
                   </div>

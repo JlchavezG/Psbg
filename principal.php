@@ -55,7 +55,7 @@ $_SESSION['time'] = time();
     // declara una variable
     $Tdash = $user['Id_Tusuario'];
     // validar o comparar el tipo de dato para determinar la accion
-    if($Tdash == 1){include 'main/sidebarS.php';} else if($Tdash == 2){include 'main/sidebarA.php';} else if($Tdash == 3){include 'main/sidebarU.php';}
+    if($Tdash == 1){include 'main/sidebarS.php';}else if($Tdash == 2){include 'main/sidebarA.php';}else if($Tdash == 3){include 'main/sidebarU.php';}
      ?>
     <div id="page-content-wrapper">
     <!-- incluir a hora navbar -->
