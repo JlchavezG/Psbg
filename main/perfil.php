@@ -39,7 +39,7 @@ $imprimir = $join->fetch_array();
            <div class="card">
             <div class="card-header bg-secondary text-light">Estatus a la fecha</div>
             <div class="card-body">
-              <h5 class="text-center text-success"><?php echo $user['Estado'];?></h5>
+              <h5 class="text-center text-success"><span class="icon-ok"></span> <?php echo $user['Estado'];?></h5>
             </div>
           </div>
         </div>
