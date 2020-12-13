@@ -8,9 +8,6 @@ $fecha = date("d/m/Y"); ?>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Sistema IscjlchavezG ver:1.0 <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Fecha: <span class="icon-calendar"></a>
@@ -20,7 +17,7 @@ $fecha = date("d/m/Y"); ?>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <?php echo $user['Nombre'] ?> &nbsp;<span class="icon-cog"></span> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
+        <span class="icon-circle text-success"></span> <?php echo $user['Nombre'] ?> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
@@ -30,7 +27,7 @@ $fecha = date("d/m/Y"); ?>
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><span class="icon-bell-alt"></span></a>
+        <a class="nav-link" href="#"> | <span class="icon-bell-alt"></span><span class="badge badge-danger">0</span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><span class="icon-facebook-rect"></span></a>
