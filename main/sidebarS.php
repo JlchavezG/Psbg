@@ -14,7 +14,7 @@
       <a href="#" class="list-group-item list-group-item-action bg-light"><span class="icon-folder-open-empty-1"></span> Reportes</a>
       <a href="#" class="list-group-item list-group-item-action bg-light"><span class="icon-desktop"></span> Entretenimiento</a>
       <a href="#" class="list-group-item list-group-item-action bg-light"><span class="icon-mail-alt"></span> Contacto</a>
-      <a href="#" class="list-group-item list-group-item-action bg-light"><span class="icon-comment"></span> Notificaciones</a>
+      <a href="notificaciones.php" class="list-group-item list-group-item-action bg-light"><span class="icon-comment"></span> Notificaciones</a>
       <a href="#" class="list-group-item list-group-item-action bg-light" onclick="mensaje();"><span class="icon-book"></span> Acerca de</a>
     </div>
   </div>
