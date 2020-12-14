@@ -3,7 +3,7 @@ $datos = "SELECT * FROM Usuarios";
 $dato = $conecta->query($datos);
  ?>
 <div class="container py-4">
-  <div class="card">
+  <div class="card shadow-lg p-3 mb-5 rounded">
       <div class="container">
          <div class="row">
            <div class="col-sm-12 col-md-12 col-lg-12 py-4">
@@ -16,7 +16,7 @@ $dato = $conecta->query($datos);
              <select class="custom-select" name="user2">
                 <option selected>Selecciona al Usuario a Notificar</option>
                 <?php while($row = $dato->fetch_assoc()) {  ?>
-                 <option value="<?php echo $row['Id_Usuarios']; ?>"><?php echo $row['Nombre']; ?></option>
+                 <option value="<?php echo $row['Id_Usuarios']; ?>"><?php echo $row['Nombre']; echo "&nbsp;".$row['ApellidoP']; echo "&nbsp;".$row['ApellidoM']; ?></option>
                 <?php } ?>
              </select>
            </div>
@@ -36,7 +36,10 @@ $dato = $conecta->query($datos);
          </div>
          <div class="row py-3">
            <div class="col-sm-12 col-md-12 col-lg-12 py-4">
-             <input type="submit" name="notificar" value="Notificar" class="btn btn-success btn-sm btn-block">
+             <input type="submit" name="notificar" value="Notificar" class="btn btn-outline-success btn-sm btn-block">
+           </div>
+           <div class="col-sm-12 col-md-12 col-lg-12 py-1">
+             <input type="submit" name="borrar" value="Borrar" class="btn btn-outline-danger btn-sm btn-block">
            </div>
          </div>
       </div>

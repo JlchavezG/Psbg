@@ -32,9 +32,9 @@ $imprimir = $join->fetch_array();
             <div class="card">
                 <div class="card-header bg-secondary text-light"><span class="icon-cogs"></span> Acciones de Perfil</div>
                 <div class="card-body">
-                   <a href="#" class="btn btn-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
-                    <a href="#" class="btn btn-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
-                   <a href="#" class="btn btn-info btn-sm btn-block" onclick="imprimir();"><span class="icon-print"></span> Imprimir Perfil</a>
+                   <a href="#" class="btn btn-outline-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
+                   <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir();"><span class="icon-print"></span> Imprimir Perfil</a>
                 </div>
             </div><br>
            <div class="card">
