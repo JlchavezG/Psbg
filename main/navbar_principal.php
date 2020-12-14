@@ -1,5 +1,11 @@
 <?php
-$fecha = date("d/m/Y"); ?>
+$fecha = date("d/m/Y");
+// consulta para extraer los datos de Notificaciones
+$u = $user['Id_Usuarios'];
+$n = "SELECT * FROM Notificaciones WHERE Id_User2 = $u and Opc= '0' ";
+$not = $conecta->query($n);
+$numero = $not->num_rows;
+?>
 <!-- navbar de la pagina -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
   <span class="icon-sliders" id="menu-toggle"> Menú</span>
@@ -27,10 +33,16 @@ $fecha = date("d/m/Y"); ?>
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"> | <span class="icon-bell-alt"></span><span class="badge badge-danger">0</span></a>
+        <a class="nav-link" href="#"><span class="icon-bell-alt"></span>
+          <?php
+             if ($numero > 0) {
+               echo "<span class='badge badge-danger'>".$numero;"</span>";
+             }
+            ?>
+        </span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><span class="icon-facebook-rect"></span></a>
+         <a class="nav-link" href="#"> | <span class="icon-facebook-rect"></span></a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><span class="icon-twitter"></span></a>
