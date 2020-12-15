@@ -14,7 +14,7 @@ $imprimir = $join->fetch_array();
     <h3 class="text-center"><?php echo $user['Nombre']; echo "&nbsp".$user['ApellidoP']; echo "&nbsp".$user['ApellidoM']; ?></h3>
     <div class="row py-4">
         <div class="col-sm-7 col-md-7 col-lg-7">
-            <div class="card">
+            <div class="card shadow-lg p-3 mb-5 rounded">
                   <div class="card-header bg-dark text-light"><span class="icon-tags"></span> Datos de Perfil</div>
                   <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -29,22 +29,22 @@ $imprimir = $join->fetch_array();
             </div>
         </div>
         <div class="col-sm-5 col-md-5 col-lg-5">
-            <div class="card">
+            <div class="card shadow-lg p-3 mb-5 rounded">
                 <div class="card-header bg-secondary text-light"><span class="icon-cogs"></span> Acciones de Perfil</div>
                 <div class="card-body">
-                   <a href="#" class="btn btn-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
-                    <a href="#" class="btn btn-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
-                   <a href="#" class="btn btn-info btn-sm btn-block" onclick="imprimir();"><span class="icon-print"></span> Imprimir Perfil</a>
+                   <a href="#" class="btn btn-outline-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
+                   <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir();"><span class="icon-print"></span> Imprimir Perfil</a>
+                <hr>
+                <div class="row text-center">
+                    <div class="text-center">
+                      <h4>Estado Actual :</h4> <h5 class="text-center text-success"><span class="icon-ok"></span> <?php echo $user['Estado'];?></h5>
+                    </div>
                 </div>
-            </div><br>
-           <div class="card">
-            <div class="card-header bg-secondary text-light">Estatus a la fecha</div>
-            <div class="card-body">
-              <h5 class="text-center text-success"><span class="icon-ok"></span> <?php echo $user['Estado'];?></h5>
             </div>
-          </div>
         </div>
     </div>
+  </div>
     <div class="row">
        <div class="col-sm-12 col-md12 col-lg-12 text-center">
           <img src="img/firma.png" alt="">

@@ -1,9 +1,31 @@
 <?php
+error_reporting(0);
 $datos = "SELECT * FROM Usuarios";
 $dato = $conecta->query($datos);
+// validacion de envio de informacion por medio de el boton notificar
+if (isset($_POST['notificar'])) {
+//recuperar datos
+$user1 = $user['Id_Usuarios'];
+$user2 = $conecta->real_escape_string($_POST['user2']);
+$impor = $conecta->real_escape_string($_POST['Importancia']);
+$mensaje = $conecta->real_escape_string($_POST['Mansaje']);
+$fecha = date('Y/m/d');
+$Opc = '0';
+// consulta para insertar notificacion
+$noti = "INSERT INTO Notificaciones(Id_User1, Id_User2, Importancia, Mensaje, FechaN, Opc)VALUES('$user1','$user2','$impor','$mensaje','$fecha','$Opc')";
+$notificacion = $conecta->query($noti);
+if ($notificacion > 0) {
+  $alerta.= "<div class='alert alert-success alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
+                <strong>Notificación Exitosa</strong> Tu mensaje se ha enviado correctamente.
+                <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                   <span aria-hidden='true'>&times;</span>
+                </button>
+              </div>";
+}
+}
  ?>
 <div class="container py-4">
-  <div class="card">
+  <div class="card shadow-lg p-3 mb-5 rounded">
       <div class="container">
          <div class="row">
            <div class="col-sm-12 col-md-12 col-lg-12 py-4">
@@ -16,16 +38,16 @@ $dato = $conecta->query($datos);
              <select class="custom-select" name="user2">
                 <option selected>Selecciona al Usuario a Notificar</option>
                 <?php while($row = $dato->fetch_assoc()) {  ?>
-                 <option value="<?php echo $row['Id_Usuarios']; ?>"><?php echo $row['Nombre']; ?></option>
+                 <option value="<?php echo $row['Id_Usuarios']; ?>"><?php echo $row['Nombre']; echo "&nbsp;".$row['ApellidoP']; echo "&nbsp;".$row['ApellidoM']; ?></option>
                 <?php } ?>
              </select>
            </div>
            <div class="col-sm-6 col-md-6 col-lg-6 py-4">
              <select class="custom-select" name="Importancia">
-                <option selected>Selecciona Nuvel de Importancia</option>
-                <option value="1">Alta</option>
-                <option value="2">Media</option>
-                <option value="3">Baja</option>
+                <option selected>Selecciona Nivel de Importancia</option>
+                <option value="Alta">Alta</option>
+                <option value="Media">Media</option>
+                <option value="Baja">Baja</option>
              </select>
            </div>
          </div>
@@ -36,8 +58,16 @@ $dato = $conecta->query($datos);
          </div>
          <div class="row py-3">
            <div class="col-sm-12 col-md-12 col-lg-12 py-4">
-             <input type="submit" name="notificar" value="Notificar" class="btn btn-success btn-sm btn-block">
+             <input type="submit" name="notificar" value="Notificar" class="btn btn-outline-success btn-sm btn-block">
            </div>
+           <div class="col-sm-12 col-md-12 col-lg-12 py-1">
+             <input type="submit" name="borrar" value="Borrar" class="btn btn-outline-danger btn-sm btn-block">
+           </div>
+         </div>
+         <div class="row">
+             <div class="col-sm-12 col-md-12 col-lg-12">
+                 <?php echo $alerta; ?>
+             </div>
          </div>
       </div>
       </form>
