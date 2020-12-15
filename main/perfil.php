@@ -4,6 +4,7 @@ u.Password, u.Img, u.Estado, g.Id_Genero, g.NombreG, p.Id_Plantel, p.NombreP, p.
 INNER JOIN Plantel as p ON u.Id_Plantel = p.Id_Plantel INNER JOIN Tusuario as t ON u.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
 $join = $conecta->query($inner);
 $imprimir = $join->fetch_array();
+$online = time()/60;
  ?>
 <div class="container" id="perfil">
     <div class="row py-4 text-center">
@@ -32,12 +33,14 @@ $imprimir = $join->fetch_array();
             <div class="card shadow-lg p-3 mb-5 rounded">
                 <div class="card-header bg-secondary text-light"><span class="icon-cogs"></span> Acciones de Perfil</div>
                 <div class="card-body">
+                   <h5 class="text-muted text-center">Nombre de Usuario : <b><?php echo $user['Usuario']; ?></b></h5><hr>
                    <a href="#" class="btn btn-outline-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
-                    <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
+                   <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
                    <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir();"><span class="icon-print"></span> Imprimir Perfil</a>
-                <hr>
+
+                <hr><br>
                 <div class="row text-center">
-                    <div class="text-center">
+                    <div class="col text-center">
                       <h4>Estado Actual :</h4> <h5 class="text-center text-success"><span class="icon-ok"></span> <?php echo $user['Estado'];?></h5>
                     </div>
                 </div>
