@@ -1,11 +1,23 @@
 <?php
+error_reporting(0);
 $fecha = date("d/m/Y");
 // consulta para extraer los datos de Notificaciones
 $u = $user['Id_Usuarios'];
 $n = "SELECT * FROM Notificaciones WHERE Id_User2 = $u and Opc= '0' ";
 $not = $conecta->query($n);
 $numero = $not->num_rows;
+if ($numero > 0) {
+  $red.= "<span class='badge badge-pill badge-danger'>$numero</span>";
+   while($row = $not->fetch_array()) {
+        $mensaje = $row["Mensaje"];
+        $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-lefth'><small> $mensaje </small> </p><div class='dropdown-divider'></div></a>";
 
+   }
+}
+else{
+  $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-center'>Sin Notificaciones</p></a>
+  <div class='dropdown-divider'></div>";
+}
 ?>
 <!-- navbar de la pagina -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -34,9 +46,13 @@ $numero = $not->num_rows;
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"><span class="icon-bell-alt"></span>
-        <span class="badge badge-pill badge-danger"><?php echo $numero; ?></span>
-        </span></a>
+        <a class="nav-link" href="#"><span class="icon-bell-alt"><?php echo $red; ?></span></a>
+      </li>
+      <li class="nav-item dropdown dropleft">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <?php echo $y; ?>
+        </div>
       </li>
       <li class="nav-item">
          <a class="nav-link" href="#"> | <span class="icon-facebook-rect"></span></a>
