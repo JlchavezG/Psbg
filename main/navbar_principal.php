@@ -5,6 +5,7 @@ $u = $user['Id_Usuarios'];
 $n = "SELECT * FROM Notificaciones WHERE Id_User2 = $u and Opc= '0' ";
 $not = $conecta->query($n);
 $numero = $not->num_rows;
+
 ?>
 <!-- navbar de la pagina -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
@@ -34,18 +35,17 @@ $numero = $not->num_rows;
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"><span class="icon-bell-alt"></span>
-          <?php
-             if ($numero > 0) {
-               echo "<span class='badge badge-danger'>".$numero;"</span>";
-             }
-            ?>
+        <span class="badge badge-pill badge-danger"><?php echo $numero; ?></span>
         </span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
          <a class="nav-link" href="#"> | <span class="icon-facebook-rect"></span></a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><span class="icon-twitter"></span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="#"> <span class="icon-twitter"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#">Version: 1.0</a>
       </li>
     </ul>
   </div>
