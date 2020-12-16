@@ -15,7 +15,7 @@ if ($numero > 0) {
    }
 }
 else{
-  $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-center'>Sin Notificaciones</p></a>
+  $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-center'><small> Sin Notificaciones</small></p></a>
   <div class='dropdown-divider'></div>";
 }
 ?>

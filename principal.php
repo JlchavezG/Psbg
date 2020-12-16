@@ -50,6 +50,7 @@ $_SESSION['time'] = time();
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+    <link rel="stylesheet" href="css/pace.css">
     <!-- mandamos llamar jquery -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- script -->
@@ -79,5 +80,6 @@ $_SESSION['time'] = time();
     $("#wrapper").toggleClass("toggled");
   });
   </script>
+  <script src="js/pace.js"></script>
   </body>
 </html>

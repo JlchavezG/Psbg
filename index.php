@@ -78,6 +78,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" href="css/pace.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <title>Inicio | Sesión IscjlchavezG</title>
   </head>
@@ -143,6 +144,7 @@
        $('#pass').attr("type","password");
   }
   </script>
+  <script src="js/pace.js"></script>
   <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
