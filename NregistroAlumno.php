@@ -75,6 +75,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/pace.css">
     <!-- script de jquery -->
     <script src="js/jquery-3.5.1.min.js"></script>
     <title>Registro de Usuario | Iscjlchavezg</title>
@@ -219,5 +220,6 @@
       document.Fregistro.submit.disabled = !document.Fregistro.checkbox.checked;
     }
   </script>
+  <script src="js/pace.js"></script>
   </body>
 </html>
