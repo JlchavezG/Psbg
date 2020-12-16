@@ -36,7 +36,7 @@ $online = time()/60;
                    <h5 class="text-muted text-center">Nombre de Usuario : <b><?php echo $user['Usuario']; ?></b></h5><hr>
                    <a href="#" class="btn btn-outline-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
                    <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
-                   <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir();"><span class="icon-print"></span> Imprimir Perfil</a>
+                   <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir('perfil');"><span class="icon-print"></span> Imprimir Perfil</a>
 
                 <hr><br>
                 <div class="row text-center">
@@ -56,7 +56,12 @@ $online = time()/60;
     </div>
 </div>
 <script type="text/javascript">
-   function imprimir(){
-     alert("La proxima clase lo hacemos");
+   function imprimir(perfil){
+     var ficha = document.getElementById(perfil);
+     var ventana = window.open('','popimpr');
+     ventana.document.write(ficha.innerHTML);
+     ventana.document.close();
+     ventana.print();
+     ventana.close();
    }
 </script>
