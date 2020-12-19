@@ -35,7 +35,7 @@ else{
           <a class="dropdown-item text-success" href="#"><span class="icon-calendar-empty"> <?php echo $fecha;?></a>
           <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
           <a class="dropdown-item" href="historial.php"><span class="icon-calendar-2"></span> Historial</a>
-          <a class="dropdown-item" href="Configuración.php"><span class="icon-cogs"></span> Configuración</a>
+          <a class="dropdown-item" href="configuracion.php"><span class="icon-cogs"></span> Configuración</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
         </div>
