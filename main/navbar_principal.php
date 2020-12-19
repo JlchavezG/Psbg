@@ -29,18 +29,13 @@ else{
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Fecha: <span class="icon-calendar"></a>
+        <span class="icon-circle text-success"></span> <?php echo $user['Nombre'] ?> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
+        <span class="icon-cog"></span></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-success" href="#"><span class="icon-calendar-empty"> <?php echo $fecha;?></a>
-          <a class="dropdown-item" href="#"><span class="icon-calendar-2"></span> Calendario</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="icon-circle text-success"></span> <?php echo $user['Nombre'] ?> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
-        </a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
           <a class="dropdown-item" href="historial.php"><span class="icon-calendar-2"></span> Historial</a>
+          <a class="dropdown-item" href="Configuración.php"><span class="icon-cogs"></span> Configuración</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
         </div>
@@ -48,20 +43,23 @@ else{
       <li class="nav-item active">
         <a class="nav-link" href="#"><span class="icon-bell-alt"><?php echo $red; ?></span></a>
       </li>
-      <li class="nav-item dropdown dropleft">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <?php echo $y; ?>
         </div>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="#"> | <span class="icon-facebook-rect"></span></a>
+        <a class="nav-link" href="#"><span class="icon-facebook-rect"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"> <span class="icon-twitter"></span></a>
+        <a class="nav-link" href="#"><span class="icon-twitter-bird"></span></a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="#">Version: 1.0</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="icon-linkedin-rect"></span> | </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> Version 1.0 </a>
       </li>
     </ul>
   </div>

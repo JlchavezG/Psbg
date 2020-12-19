@@ -25,3 +25,11 @@
  outline-width: 0 !important;
  transition: 1s;
 }
+.boton{
+background: #343D5b;
+border-radius: 1000px;
+position: relative;
+cursor: pointer;
+display: flex;
+outline: none;
+}
