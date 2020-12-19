@@ -4,7 +4,6 @@ u.Password, u.Img, u.Estado, g.Id_Genero, g.NombreG, p.Id_Plantel, p.NombreP, p.
 INNER JOIN Plantel as p ON u.Id_Plantel = p.Id_Plantel INNER JOIN Tusuario as t ON u.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
 $join = $conecta->query($inner);
 $imprimir = $join->fetch_array();
-$online = time()/60;
  ?>
 <div class="container" id="perfil">
     <div class="row py-4 text-center">
