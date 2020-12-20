@@ -3,6 +3,8 @@
  error_reporting(0);
         // activar o iniciar una variable de sesion
         session_start();
+        $email = $_POST['email'];
+        $us = $_POST['Usuario'];
         // mandar o solicitar la conexion a bd
         include 'main/conecta.php';
         include 'main/configreg.php';

@@ -18,11 +18,13 @@ if ($dupla > 0) {
 }
 $on = "UPDATE Usuarios SET Online = '1' WHERE Id_Usuarios = $on1";
 $line = $conecta->query($on);
+// INSERTAR datos en historial
+
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
    $inactivo = 300; // 5 minutos
-   // se calcula el tiempo inactivo ene l aplicativo
+   // se calcula el tiempo inactivo en el aplicativo
    $tiempo = time() - $_SESSION['time'];
    // verificamos si el tiempo pasa lo establecido para cerrar la sesion y redirigir
    if ($tiempo > $inactivo) {
