@@ -12,12 +12,14 @@ if (isset($_POST['recuperar'])) {
   $ejecuta = $conecta->query($consulta);
   $encontro = $ejecuta->fetch_array();
   $id = $encontro['Id_Usuarios'];
+  $email = $encontro['Email'];
   if ($encontro > 0) {
     $encontrado.="<div class='alert alert-success' role='alert'>
                   Se encontraron tus datos por favor Modifica tu password.</div>
                   <div class='container'>
-                    <form  method='get'>
+                    <form action='main/reperarpass.php' method='get'>
                        <div class='row py-2'>
+                          <input type='hidden' name='id' value='$id'>
                           <input type='password' class='caja' name='npass' placeholder='Nuevo password' requerid><br>
                        </div>
                        <div class='row py-3'>
