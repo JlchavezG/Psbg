@@ -117,7 +117,7 @@
                     <hr>
                        <div class="row">
                              <div class="col">
-                                  <p class="text-muted"><span class="icon-award-empty"></span> ¿Olvidaste tu Password?</p>
+                                  <a href="recuperarpass.php" class="text-muted text-decoration-none"><p class="text-muted"><span class="icon-award-empty"></span> Recuperar Password</p></a>
                              </div>
                              <div class="col">
                                <a href="NregistroUser.php" class="text-muted text-decoration-none"><span class="icon-user-add"></span>Registrate </a>

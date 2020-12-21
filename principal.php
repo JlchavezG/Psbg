@@ -16,6 +16,7 @@ if ($dupla > 0) {
   $user = $dupla;
   $on1 = $user['Id_Usuarios'];
 }
+// actualizar campo de online
 $on = "UPDATE Usuarios SET Online = '1' WHERE Id_Usuarios = $on1";
 $line = $conecta->query($on);
 // INSERTAR datos en historial
