@@ -29,7 +29,7 @@ mail($para, $titulo, $mensaje, $cabeceras);
     <link rel="stylesheet" href="css/pace.css">
     <script src="js/jquery-3.5.1.min.js"></script>
   </head>
-  <body>
+  <body><br>
     <div class="container py-4"><br>
          <div class="card col-sm-12 col-md-12 col-lg-12 shadow-lg p-3 mb-5 bg-white rounded py-4">
                <h4 class="text-center py-4">Se modifico el password de el email: <?php echo $correo; ?></h4>
@@ -46,8 +46,14 @@ mail($para, $titulo, $mensaje, $cabeceras);
                <div class="alert alert-success" role="alert">
                  Ya puedes ingresar al sitema con tu nuevo Password solo da <a href="../index.php" class="text-muted text-decoration-none">click para iniciar sesión</a>
                </div>
-          </div>     
+          </div>
          </div>
+    </div>
+    <div class="row">
+       <div class="col-sm-12 col-md12 col-lg-12 text-center">
+          <img src="../img/firma.png" alt="">
+         <p class="text-center text-muted"> Desarrollo iscjlchavezg@2020 by Developer</p>
+       </div>
     </div>
 
 

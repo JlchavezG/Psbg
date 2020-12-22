@@ -19,6 +19,10 @@ if ($dupla > 0) {
 // actualizar campo de online
 $on = "UPDATE Usuarios SET Online = '1' WHERE Id_Usuarios = $on1";
 $line = $conecta->query($on);
+// configurar la zona horaria y sacar al hora de el servidor
+ini_set('date.timezone','America/Mexico_City');
+$tiempo = date('H:i:s', time());
+
 // INSERTAR datos en historial
 
 // validacion de expirar sesion por tiempo
