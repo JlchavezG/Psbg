@@ -33,7 +33,7 @@ $imprimir = $join->fetch_array();
                 <div class="card-header bg-secondary text-light"><span class="icon-cogs"></span> Acciones de Perfil</div>
                 <div class="card-body">
                    <h5 class="text-muted text-center">Nombre de Usuario : <b><?php echo $user['Usuario']; ?></b></h5><hr>
-                   <a href="#" class="btn btn-outline-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
+                   <a href="ModificarDperfil.php" class="btn btn-outline-warning btn-sm btn-block"><span class="icon-pencil"></span> Modificar Datos</a>
                    <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Modificar Password</a>
                    <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir('perfil');"><span class="icon-print"></span> Imprimir Perfil</a>
 
