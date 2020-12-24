@@ -9,6 +9,7 @@ $perfil = $bmodifica->fetch_array();
 // validar que se presione al boton actualizar
 if(isset($_POST['modificar'])){
 // recuperar los datos
+$ids = $_POST['id'];
 $nom = $conecta->real_escape_string($_POST['nombre']);
 $ap1 = $conecta->real_escape_string($_POST['ApellidoP']);
 $ap2 = $conecta->real_escape_string($_POST['ApellidoM']);
@@ -17,8 +18,9 @@ $f_n = $conecta->real_escape_string($_POST['F_Nacimiento']);
 $em  = $conecta->real_escape_string($_POST['Email']);
 $us  = $conecta->real_escape_string($_POST['user']);
 // consulta para actualizar los datos de usaurio
-$m = "UPDATE Usuarios SET Nombre = '$nom', ApellidoP = '$ap1', ApellidoM = '$ap2', F_Nacimiento = '$f_n', Telefono = '$tel',
-Email = '$em', Usuario = '$us' WHERE Id_Usuarios = $id";
+$sql = "UPDATE Usuarios SET Nombre = '$nom', ApellidoP = '$ap1', ApellidoM = '$ap2', F_Nacimiento = '$f_n', Telefono= '$tel',
+Email = '$em', Usuario = '$us' WHERE Id_Usuarios = '$ids'";
+$resultado = $conecta->query($sql);
 
 }
 ?>
