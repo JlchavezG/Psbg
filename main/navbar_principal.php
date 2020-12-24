@@ -33,7 +33,7 @@ else{
         <span class="icon-cog"></span></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <a class="dropdown-item text-success" href="#"><span class="icon-calendar-empty"> <?php echo $fecha;?></a>
-          <a class="dropdown-item" href="perfil.php"><span class="icon-user"></span> Perfil</a>
+          <a class="dropdown-item" href="Perfiles.php"><span class="icon-user"></span> Perfil</a>
           <a class="dropdown-item" href="configuracion.php"><span class="icon-cogs"></span> Configuración</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
