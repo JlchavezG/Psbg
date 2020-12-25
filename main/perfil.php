@@ -8,7 +8,7 @@ $imprimir = $join->fetch_array();
 <div class="container" id="perfil">
     <div class="row py-4 text-center">
         <div class="col-sm-10 col-md-10 col-lg-12">
-          <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen perfil de usaurio" style="width:250px;" class="rounded-circle">
+          <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen perfil de usaurio" style="width:250px;" class="rounded-circle shadow-lg bg-secondary p-2 mb-3 rounded">
         </div>
     </div><hr>
     <h3 class="text-center"><?php echo $user['Nombre']; echo "&nbsp".$user['ApellidoP']; echo "&nbsp".$user['ApellidoM']; ?></h3>
