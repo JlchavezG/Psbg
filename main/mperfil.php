@@ -21,22 +21,23 @@ $us  = $conecta->real_escape_string($_POST['user']);
 $sql = "UPDATE Usuarios SET Nombre = '$nom', ApellidoP = '$ap1', ApellidoM = '$ap2', F_Nacimiento = '$f_n', Telefono= '$tel',
 Email = '$em', Usuario = '$us' WHERE Id_Usuarios = '$ids'";
 $resultado = $conecta->query($sql);
-
+header("location:principal.php");
 }
 ?>
 <div class="container py-4">
   <div class="row py-3 text-center ">
-     <p class="text-center text-muted"> El perfil de usuario a modificar pertenece a : </p>
+     <p class="text-center text-muted"> El perfil de usuario a modificar pertenece a : <?php echo $perfil['Nombre']; echo "&nbsp;".$perfil['ApellidoP'];
+      echo "&nbsp;".$perfil['ApellidoM']; ?></p>
   </div>
   <hr>
   <div class="row py-3">
        <div class="container">
           <form name="modificarp" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="col-sm-10 col-md-10 col-lg-10">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                 <input type="hidden" value="<?php echo $perfil['Id_Usuarios']; ?>" name="id" class="form-control" placeholder="Id">
                 <input type="text" value="<?php echo $perfil['Nombre']; ?>" name="nombre" class="form-control" placeholder="Nombre">
             </div>
-            <div class="col-sm-10 col-md-10 col-lg-10">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                <div class="row py-2">
                  <div class="col-sm-6 col-md-6 col-lg-6">
                     <input type="text" value="<?php echo $perfil['ApellidoP']; ?>" name="ApellidoP" class="form-control" placeholder="Apellido Paterno">
@@ -71,3 +72,12 @@ $resultado = $conecta->query($sql);
        </div>
   </div>
 </div>
+<!-- firma -->
+<div class="row justify-content-center align-items-center">
+   <img src="img/firma.png" alt="firma jose luis chavez g">
+</div>
+</div>
+<div class="container py-2">
+   <p class="text-center">IscjlchavezG@desarrollorWeb</p>
+</div>
+<!-- temina firma -->
