@@ -20,13 +20,22 @@ else{
 }
 ?>
 <!-- navbar de la pagina -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-  <span class="icon-sliders" id="menu-toggle"> Menú</span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+  <span class="icon-sliders text-light" id="menu-toggle"> Menú</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="icon-facebook-rect"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="icon-twitter-bird"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><span class="icon-linkedin-rect"></span> | </a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="icon-circle text-success"></span> <?php echo $user['Nombre'] ?> &nbsp; <img src="img/perfil/<?php echo $user['Img']; ?>" alt="Imagen de perfil" style="width:30px; heigth:30px; border-radius:50%;">
@@ -47,15 +56,6 @@ else{
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <?php echo $y; ?>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><span class="icon-facebook-rect"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><span class="icon-twitter-bird"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><span class="icon-linkedin-rect"></span> | </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="#"> Version 1.0 </a>
