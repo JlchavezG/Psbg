@@ -45,6 +45,7 @@ $_SESSION['time'] = time();
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/simple-sidebar.css">
+    <link rel="stylesheet" href="css/pace.css">
     <!-- mandamos llamar jquery -->
     <script src="js/jquery-3.5.1.min.js"></script>
   </head>
@@ -69,6 +70,7 @@ $_SESSION['time'] = time();
     </div>
   </div>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/pace.js"></script>
   <script>
   $("#menu-toggle").click(function(e) {
     e.preventDefault();

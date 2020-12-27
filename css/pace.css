@@ -11,7 +11,7 @@
 }
 
 .pace .pace-progress {
-  background: #d63513;
+  background: #008f39;
   position: fixed;
   z-index: 2000;
   top: 0;
@@ -26,7 +26,7 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #d63513, 0 0 5px #d63513;
+  box-shadow: 5 0 10px #008f39, 0 0 5px #008f39;
   opacity: 1.0;
   -webkit-transform: rotate(3deg) translate(0px, -4px);
   -moz-transform: rotate(3deg) translate(0px, -4px);
