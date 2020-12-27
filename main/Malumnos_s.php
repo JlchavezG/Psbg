@@ -39,7 +39,7 @@
        <div class="row py-1 text-center">
            <div class="col">
              <!-- tarjetas -->
-             <a href="#" class="text-decoration-none"><div class="card bg-secondary mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 1200px;">
+             <a href="#" class="text-decoration-none"><div class="card bg-success mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 340px;">
                  <div class="row no-gutters">
                     <div class="col-md-4">
                        <h3 class="display-4 text-light"><span class="icon-pencil"></span></h3>
@@ -47,7 +47,43 @@
                     <div class="col-md-8">
                         <div class="card-body">
                            <h5 class="card-title text-light"> Modificar</h5>
-                           <p class="card-text"><small class="text-light">Modificar datos de alumno dentro de la plataforma</small></p>
+                           <p class="card-text"><small class="text-light">Datos en la plataforma</small></p>
+                        </div>
+                   </div>
+                </div>
+             </div></a>
+             <!-- tarjetas -->
+           </div>
+
+           <div class="col">
+             <!-- tarjetas -->
+             <a href="#" class="text-decoration-none"><div class="card bg-warning mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 340px;">
+                 <div class="row no-gutters">
+                    <div class="col-md-4">
+                       <h3 class="display-4 text-light"><span class="icon-doc"></span></h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                           <h5 class="card-title text-light"> Reporte</h5>
+                           <p class="card-text"><small class="text-light">Generar reporte PDF</small></p>
+                        </div>
+                   </div>
+                </div>
+             </div></a>
+             <!-- tarjetas -->
+           </div>
+
+           <div class="col">
+             <!-- tarjetas -->
+             <a href="#" class="text-decoration-none"><div class="card bg-success mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 340px;">
+                 <div class="row no-gutters">
+                    <div class="col-md-4">
+                       <h3 class="display-4 text-light"><span class="icon-pencil"></span></h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                           <h5 class="card-title text-light"> Modificar</h5>
+                           <p class="card-text"><small class="text-light">Datos de alumno dentro de la plataforma</small></p>
                         </div>
                    </div>
                 </div>
