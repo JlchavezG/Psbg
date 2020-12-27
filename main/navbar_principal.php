@@ -58,7 +58,7 @@ else{
         </div>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#"> Version 1.0 </a>
+        <a class="nav-link" href="#"> Version 1.2 </a>
       </li>
     </ul>
   </div>
