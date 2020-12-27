@@ -54,7 +54,6 @@
              </div></a>
              <!-- tarjetas -->
            </div>
-
            <div class="col">
              <!-- tarjetas -->
              <a href="#" class="text-decoration-none"><div class="card bg-warning mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 340px;">
@@ -72,22 +71,21 @@
              </div></a>
              <!-- tarjetas -->
            </div>
-
            <div class="col">
              <!-- tarjetas -->
-             <a href="#" class="text-decoration-none"><div class="card bg-success mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 340px;">
+             <div class="card bg-secondary mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 340px;">
                  <div class="row no-gutters">
                     <div class="col-md-4">
-                       <h3 class="display-4 text-light"><span class="icon-pencil"></span></h3>
+                       <h3 class="display-4 text-light"><?php echo $contar; ?></h3>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                           <h5 class="card-title text-light"> Modificar</h5>
-                           <p class="card-text"><small class="text-light">Datos de alumno dentro de la plataforma</small></p>
+                           <h5 class="card-title text-light"> Alumnos</h5>
+                           <p class="card-text"><small class="text-light">Total de Alumnos</small></p>
                         </div>
                    </div>
                 </div>
-             </div></a>
+             </div>
              <!-- tarjetas -->
            </div>
        </div>
