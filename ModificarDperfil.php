@@ -106,32 +106,32 @@ else {
                   <div class="container">
                      <form name="modificarp" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                        <div class="col-sm-12 col-md-12 col-lg-12">
-                           <input type="hidden" value="<?php echo $perfil['Id_Usuarios']; ?>" name="id" class="form-control" placeholder="Id">
-                           <input type="text" value="<?php echo $perfil['Nombre']; ?>" name="nombre" class="form-control" placeholder="Nombre">
+                           <input type="hidden" value="<?php echo $perfil['Id_Usuarios']; ?>" name="id" class="caja" placeholder="Id">
+                           <input type="text" value="<?php echo $perfil['Nombre']; ?>" name="nombre" class="caja" placeholder="Nombre">
                        </div>
                        <div class="col-sm-12 col-md-12 col-lg-12">
                           <div class="row py-2">
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                               <input type="text" value="<?php echo $perfil['ApellidoP']; ?>" name="ApellidoP" class="form-control" placeholder="Apellido Paterno">
+                               <input type="text" value="<?php echo $perfil['ApellidoP']; ?>" name="ApellidoP" class="caja" placeholder="Apellido Paterno">
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                                <input type="text" value="<?php echo $perfil['ApellidoM']; ?>" name="ApellidoM" class="form-control" placeholder="Apellido Materno">
+                                <input type="text" value="<?php echo $perfil['ApellidoM']; ?>" name="ApellidoM" class="caja" placeholder="Apellido Materno">
                             </div>
                           </div>
                           <div class="row py-2">
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                               <input type="tel" value="<?php echo $perfil['Telefono']; ?>" name="Telefono" class="form-control" placeholder="Telefono">
+                               <input type="tel" value="<?php echo $perfil['Telefono']; ?>" name="Telefono" class="caja" placeholder="Telefono">
                             </div>
                             <div class="col-sm-6 col-md-6 col-lg-6">
-                                <input type="date" name="F_Nacimiento" value="<?php echo $perfil['F_Nacimiento']; ?>" class="form-control" placeholder="Fecha de nacimiento">
+                                <input type="date" name="F_Nacimiento" value="<?php echo $perfil['F_Nacimiento']; ?>" class="caja" placeholder="Fecha de nacimiento">
                             </div>
                           </div>
                           <div class="row py-2">
                              <div class="col-sm-6 col-md-6 col-lg-6">
-                                <input type="text" value="<?php echo $perfil['Email']; ?>" name="Email" class="form-control" placeholder="Email">
+                                <input type="text" value="<?php echo $perfil['Email']; ?>" name="Email" class="caja" placeholder="Email">
                              </div>
                              <div class="col-sm-6 col-md-6 col-lg-6">
-                                <input type="text" value="<?php echo $perfil['Usuario']; ?>" name="user" class="form-control" placeholder="Usuario">
+                                <input type="text" value="<?php echo $perfil['Usuario']; ?>" name="user" class="caja" placeholder="Usuario">
                              </div>
                           </div>
                           <div class="row py-2">
