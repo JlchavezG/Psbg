@@ -105,7 +105,7 @@
                         <div class="row">
                              <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="ver" onclick="verpass(this);">
-                                <label class="custom-control-label" for="ver"><span class="icon-eye"></span> Ver Password</label>
+                                <label class="custom-control-label" for="ver"> Ver Password</label>
                              </div>
                         </div>
                       </div>
