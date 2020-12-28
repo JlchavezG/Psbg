@@ -27,7 +27,9 @@ if ($notificacion > 0) {
 <div class="container py-4">
      <div class="row py-3">
          <div class="col">
+               <div class="card">
 
+               </div>
          </div>
          <div class="col">
            <div class="card shadow-lg p-3 mb-5 rounded">
@@ -47,7 +49,6 @@ if ($notificacion > 0) {
                          <?php } ?>
                       </select>
                     </div>
-
                     </div>
                     <div class="row py-2">
                     <div class="col-sm-12 col-md-12 col-lg-12 py-2">
@@ -65,7 +66,7 @@ if ($notificacion > 0) {
                     </div>
                   </div>
                   <div class="row py-3">
-                    <div class="col-sm-12 col-md-12 col-lg-12 py-4">
+                    <div class="col-sm-12 col-md-12 col-lg-12 py-2">
                       <input type="submit" name="notificar" value="Notificar" class="btn btn-outline-success btn-sm btn-block">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12 py-1">
