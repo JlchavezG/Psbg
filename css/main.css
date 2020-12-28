@@ -20,6 +20,24 @@
  outline-width: 0 !important;
  transition: 1s;
 }
+.caja1{
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  color: #ccc;
+  border-bottom: 2px solid #ccc;
+  background: transparent;
+  width: 100%;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.caja1:focus{
+ border-bottom: 2px solid green;
+ outline:none !important;
+ outline-width: 0 !important;
+ transition: 1s;
+}
 .boton{
 background: #343D5b;
 border-radius: 1000px;
