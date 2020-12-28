@@ -106,7 +106,7 @@ else {
                   <div class="container">
                      <form name="modificarp" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                        <div class="col-sm-12 col-md-12 col-lg-12">
-                           <input type="hidden" value="<?php echo $perfil['Id_Usuarios']; ?>" name="id" class="form-control" placeholder="Id">
+                           <input type="hidden" value="<?php echo $perfil['Id_Usuarios']; ?>" name="id" class="caja1" placeholder="Id">
                            <input type="text" value="<?php echo $perfil['Nombre']; ?>" name="nombre" class="form-control" placeholder="Nombre">
                        </div>
                        <div class="col-sm-12 col-md-12 col-lg-12">
