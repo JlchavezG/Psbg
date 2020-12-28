@@ -2,6 +2,11 @@
 error_reporting(0);
 $datos = "SELECT * FROM Usuarios";
 $dato = $conecta->query($datos);
+// consulta de notificaciones para el usuario en cuestion
+$u = $user['Id_Usuarios'];
+$n = "SELECT * FROM Notificaciones WHERE Id_User2 = $u and Opc= '0' LIMIT 10";
+$not = $conecta->query($n);
+$numero = $not->num_rows;
 // validacion de envio de informacion por medio de el boton notificar
 if (isset($_POST['notificar'])) {
 //recuperar datos
@@ -27,7 +32,26 @@ if ($notificacion > 0) {
 <div class="container py-4">
      <div class="row py-3">
          <div class="col">
-
+               <div class="card shadow-lg p-3 mb-5 rounded">
+                    <?php if($numero > 0) { ?>
+                      <div class="container py-2">
+                        <table class="table table-sm table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">Importancia</th>
+                                <th scope="col">Mensaje</th>
+                                <th scope="col">Fecha</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                               <tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    <?php } else { ?>
+                      <div class="alert alert-danger" role="alert">Aun no tienes ninguna notificación</div>
+                    <?php } ?>
+               </div>
          </div>
          <div class="col">
            <div class="card shadow-lg p-3 mb-5 rounded">
@@ -47,7 +71,6 @@ if ($notificacion > 0) {
                          <?php } ?>
                       </select>
                     </div>
-
                     </div>
                     <div class="row py-2">
                     <div class="col-sm-12 col-md-12 col-lg-12 py-2">
@@ -65,11 +88,11 @@ if ($notificacion > 0) {
                     </div>
                   </div>
                   <div class="row py-3">
-                    <div class="col-sm-12 col-md-12 col-lg-12 py-4">
-                      <input type="submit" name="notificar" value="Notificar" class="btn btn-outline-success btn-sm btn-block">
+                    <div class="col-sm-12 col-md-12 col-lg-12 py-2">
+                      <input type="submit" name="notificar" value="Notificar" class="btn btn-success btn-sm btn-block">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12 py-1">
-                      <input type="submit" name="borrar" value="Borrar" class="btn btn-outline-danger btn-sm btn-block">
+                      <input type="submit" name="borrar" value="Borrar" class="btn btn-danger btn-sm btn-block">
                     </div>
                   </div>
                   <div class="row">
