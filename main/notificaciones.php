@@ -46,14 +46,21 @@ if ($notificacion > 0) {
                             <tbody>
                                <?php while($row = $not->fetch_assoc()){ ?>
                                <?php $ff = $row['Fecha'];
-                                $ff = date("d/m/Y"); ?>
+                                $ff = date("d/m/Y");
+                                $ball = $row['Importancia'];
+                                if ($ball == "alta") {
+                                 $opc.= "<span class='icon-circle text-success'>";
+                                }
+
+                                 ?>
                                <tr>
-                                 <td><?php echo $row['Importancia'];?></td>
+                                 <td><span class="icon-circle text-info"> </span><?php echo $row['Importancia'];?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $ff; ?></td>
                               <?php } ?>
                             </tbody>
                           </table>
+
                       </div>
                     <?php } else { ?>
                       <div class="alert alert-danger" role="alert">Aun no tienes ninguna notificación</div>
