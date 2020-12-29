@@ -44,12 +44,20 @@ if ($notificacion > 0) {
                               </tr>
                             </thead>
                             <tbody>
+                               <?php while($row = $not->fetch_assoc()){ ?>
+                               <?php $ff = $row['Fecha'];
+                                $ff = date("d/m/Y"); ?>
                                <tr>
+                                 <td><?php echo $row['Importancia'];?></td>
+                                 <td><?php echo $row['Mensaje'];?></td>
+                                 <td><?php echo $ff; ?></td>
+                              <?php } ?>
                             </tbody>
                           </table>
                       </div>
                     <?php } else { ?>
                       <div class="alert alert-danger" role="alert">Aun no tienes ninguna notificación</div>
+                      <p  class="text-center text-muted">Te avisaremo dentro de la campana de notificaciones</p>
                     <?php } ?>
                </div>
          </div>
