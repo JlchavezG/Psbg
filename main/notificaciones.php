@@ -47,8 +47,6 @@ if ($notificacion > 0) {
                                <?php while($row = $not->fetch_assoc()){ ?>
                                <?php $ff = $row['Fecha'];
                                 $ff = date("d/m/Y");
-                                }
-
                                  ?>
                                <tr>
                                  <td><span class="icon-circle text-info"> </span><?php echo $row['Importancia'];?></td>
@@ -57,7 +55,17 @@ if ($notificacion > 0) {
                               <?php } ?>
                             </tbody>
                           </table>
-
+                          <?php if($numero > 10) {?>
+                          <nav aria-label="Page navigation example">
+                             <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="#">Antes</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                                </ul>
+                           </nav>
+                         <?php  } ?>
                       </div>
                     <?php } else { ?>
                       <div class="alert alert-danger" role="alert">Aun no tienes ninguna notificación</div>
