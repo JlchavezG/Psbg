@@ -47,9 +47,6 @@ if ($notificacion > 0) {
                                <?php while($row = $not->fetch_assoc()){ ?>
                                <?php $ff = $row['Fecha'];
                                 $ff = date("d/m/Y");
-                                $ball = $row['Importancia'];
-                                if ($ball == "alta") {
-                                 $opc.= "<span class='icon-circle text-success'>";
                                 }
 
                                  ?>
