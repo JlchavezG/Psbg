@@ -35,7 +35,8 @@ if ($notificacion > 0) {
                <div class="card shadow-lg p-3 mb-5 rounded">
                     <?php if($numero > 0) { ?>
                       <div class="container py-2">
-                        <table class="table table-sm table-hover">
+                         <h4 class="text-muted text-center">Notificaciones</h4>
+                        <table class="table table-sm table-hover py-2">
                             <thead>
                               <tr>
                                 <th scope="col">Importancia</th>
@@ -91,7 +92,7 @@ if ($notificacion > 0) {
                <div class="container">
                   <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-12 py-4">
-                       <p class="text-muted text-center">Genera una nueva notificación</p>
+                       <h4 class="text-muted text-center">Genera una nueva notificación</h4>
                     </div>
                   </div>
                   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -125,7 +126,7 @@ if ($notificacion > 0) {
                       <input type="submit" name="notificar" value="Notificar" class="btn btn-success btn-sm btn-block">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12 py-1">
-                      <input type="submit" name="borrar" value="Borrar" class="btn btn-danger btn-sm btn-block">
+                      <input type="submit" name="borrar" value="Borrar" class="btn btn-info btn-sm btn-block">
                     </div>
                   </div>
                   <div class="row">
@@ -138,4 +139,11 @@ if ($notificacion > 0) {
            </div>
          </div>
      </div>
+     <div class="row justify-content-center align-items-center">
+        <img src="img/firma.png" alt="firma jose luis chavez g">
+     </div>
+  </div>
+  <div class="container py-2">
+        <p class="text-center">IscjlchavezG@desarrollorWeb</p>
+  </div>
 </div>
