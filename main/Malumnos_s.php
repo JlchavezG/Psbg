@@ -2,19 +2,19 @@
   <div class="row py-2">
      <div class="col text-center">
        <!-- tarjetas -->
-       <div class="card bg-dark mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
+         <a href="NregistroAlumno.php" class="text-decoration-none"><div class="card bg-dark mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
            <div class="row no-gutters">
               <div class="col-md-4">
                  <h3 class="display-4 text-light"><span class="icon-user-add"></span></h3>
               </div>
               <div class="col-md-8">
-                  <div class="card-body">
+                <div class="card-body">
                      <h5 class="card-title text-light">Nuevo Alumno</h5>
                      <p class="card-text"><small class="text-light">Registrar Alumno en Plataforma</small></p>
                   </div>
              </div>
           </div>
-       </div>
+       </div></a>
        <!-- tarjetas -->
      </div>
      <div class="col text-center">
