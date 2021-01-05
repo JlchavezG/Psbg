@@ -8,7 +8,7 @@
     <div class="list-group list-group-flush">
       <a href="principal.php" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-gauge"></span> Dashboard</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-pencil"></span> Ayuda</a>
-      <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-graduation-cap"></span> Alumnos</a>
+      <a href="Alumnos_Sistemas.php" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-graduation-cap"></span> Alumnos</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-box"></span> Consultas</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-desktop"></span> Entretenimiento</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-mail-alt"></span> Contacto</a>
