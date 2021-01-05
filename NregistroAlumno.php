@@ -15,6 +15,10 @@ $dupla = $extraer->fetch_array();
 if ($dupla > 0) {
   $user = $dupla;
 }
+//validando que el usuario tenga permisos como se planteo en el sistema 
+if($user['Id_Tusuario'] != 1 and $user['Id_Tusuario'] != 2){
+  header("location:principal.php");
+}
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
