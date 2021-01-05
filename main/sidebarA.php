@@ -6,7 +6,7 @@
        <img src="img/logo-metal-iscjlchavezg.png" class="logo" alt="Logo-iscjlchavezG">
     </div>
     <div class="list-group list-group-flush">
-      <a href="principal.php" class="list-group-item list-group-item-action bg-light"><span class="icon-gauge"></span> Dashboard</a>
+      <a href="principal.php" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-gauge"></span> Dashboard</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-pencil"></span> Ayuda</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-graduation-cap"></span> Alumnos</a>
       <a href="#" class="list-group-item list-group-item-action bg-dark text-light"><span class="icon-box"></span> Consultas</a>
