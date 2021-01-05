@@ -47,24 +47,36 @@ if ($notificacion > 0) {
                                <?php while($row = $not->fetch_assoc()){ ?>
                                <?php $ff = $row['Fecha'];
                                 $ff = date("d/m/Y");
+                                $importa = $row['Importancia'];
+                                if($importancia == Alta){
+                                  $y="<span class='icon-circle text-danger'> </span>";
+                                }
+                                else if($importancia == Media){
+                                  $y="<span class='icon-circle text-warning'> </span>";
+                                }
+                                else if($importancia == Baja){
+                                  $y="<span class='icon-circle text-success'> </span>";
+                                }
                                  ?>
                                <tr>
-                                 <td><span class="icon-circle text-info"> </span><?php echo $row['Importancia'];?></td>
+                                 <td><?php echo $y; ?><?php echo $importa; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $ff; ?></td>
                               <?php } ?>
                             </tbody>
                           </table>
                           <?php if($numero > 10) {?>
-                          <nav aria-label="Page navigation example">
-                             <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">Antes</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-                                </ul>
-                           </nav>
+                          <div class="text-center">
+                            <nav aria-label="Page navigation example">
+                               <ul class="pagination">
+                                  <li class="page-item"><a class="page-link" href="#">Antes</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                                  </ul>
+                             </nav>
+                          </div>
                          <?php  } ?>
                       </div>
                     <?php } else { ?>
