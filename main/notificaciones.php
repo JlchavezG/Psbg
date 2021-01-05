@@ -48,18 +48,19 @@ if ($notificacion > 0) {
                                <?php $ff = $row['Fecha'];
                                 $ff = date("d/m/Y");
                                 $importa = $row['Importancia'];
-                                if($importancia == Alta){
-                                  $y="<span class='icon-circle text-danger'> </span>";
+                                if($importa == Baja){
+                                $importa ="<span class='icon-circle text-success'> </span>";
                                 }
-                                else if($importancia == Media){
-                                  $y="<span class='icon-circle text-warning'> </span>";
+                                else if($importa == Media){
+                                $importa ="<span class='icon-circle text-warning'> </span>";
                                 }
-                                else if($importancia == Baja){
-                                  $y="<span class='icon-circle text-success'> </span>";
+                                else if($importa == Alta){
+                                $importa ="<span class='icon-circle text-danger'> </span>";
                                 }
+
                                  ?>
                                <tr>
-                                 <td><?php echo $y; ?><?php echo $importa; ?></td>
+                                 <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $ff; ?></td>
                               <?php } ?>
