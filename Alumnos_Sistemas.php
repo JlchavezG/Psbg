@@ -62,7 +62,7 @@ $_SESSION['time'] = time();
     <!-- incluir a hora navbar -->
     <?php include 'main/navbar_principal.php';?>
    <div class="container py-4">
-      <h4 class="text-center py-3"> Menu Alumnos</h4>
+      <h4 class="text-center text-muted py-3"> Menu Alumnos</h4>
          <div class="container">
              <?php include 'main/Malumnos_s.php'; ?>
          </div>
