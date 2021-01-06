@@ -42,13 +42,13 @@ if ($notificacion > 0) {
                                 <th scope="col">Importancia</th>
                                 <th scope="col">Mensaje</th>
                                 <th scope="col">Fecha</th>
-                                <th scope="col">Opciones</tr>
+                                <th scope="col">Eliminar</tr>
                               </tr>
                             </thead>
                             <tbody>
                                <?php while($row = $not->fetch_assoc()){ ?>
-                               <?php $ff = $row['Fecha'];
-                                $ff = date("d/m/Y");
+                               <?php $ff = $row['FechaN'];
+                                $new_date = date('d-m-Y', strtotime($ff));
                                 $importa = $row['Importancia'];
                                 if($importa == Baja){
                                 $importa ="<span class='icon-circle text-success'> </span>";
@@ -64,9 +64,9 @@ if ($notificacion > 0) {
                                <tr>
                                  <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
-                                 <td><?php echo $ff; ?></td>
+                                 <td><?php echo $new_date; ?></td>
                                  <td><div class="text-center">
-                                   <a href="#" class="text-decoration-none text-muted"><span class="icon-pencil"></span></a> - <a href="#"><span class="icon-trash"></span></a>
+                                    <a href="#" class="text-decoration-none text-muted"><span class="icon-trash"></span></a>
                                  </div></td>
                               <?php } ?>
                             </tbody>
