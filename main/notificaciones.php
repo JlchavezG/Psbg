@@ -29,12 +29,12 @@ if ($notificacion > 0) {
 }
 }
  ?>
-<div class="container py-4">
+<div class="py-4">
      <div class="row py-3">
          <div class="col">
                <div class="card shadow-lg p-3 mb-5 rounded">
                     <?php if($numero > 0) { ?>
-                      <div class="container py-2">
+                      <div class="py-2">
                          <h4 class="text-muted text-center">Notificaciones</h4>
                         <table class="table table-sm table-hover py-2">
                             <thead>
@@ -42,6 +42,7 @@ if ($notificacion > 0) {
                                 <th scope="col">Importancia</th>
                                 <th scope="col">Mensaje</th>
                                 <th scope="col">Fecha</th>
+                                <th scope="col">Opciones</tr>
                               </tr>
                             </thead>
                             <tbody>
@@ -64,6 +65,9 @@ if ($notificacion > 0) {
                                  <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $ff; ?></td>
+                                 <td><div class="text-center">
+                                   <a href="#" class="text-decoration-none text-muted"><span class="icon-pencil"></span></a> - <a href="#"><span class="icon-trash"></span></a>
+                                 </div></td>
                               <?php } ?>
                             </tbody>
                           </table>
