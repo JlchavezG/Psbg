@@ -9,8 +9,18 @@ $numero = $not->num_rows;
 if ($numero > 0) {
   $red.= "<span class='badge badge-pill badge-danger'>$numero</span>";
    while($row = $not->fetch_array()) {
-        $mensaje = $row["Mensaje"];
-        $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-lefth'><small> $mensaje </small> </p><div class='dropdown-divider'></div></a>";
+     $importa = $row['Importancia'];
+     if($importa == Baja){
+     $importa ="<span class='icon-circle text-success'> </span>";
+     }
+     else if($importa == Media){
+     $importa ="<span class='icon-circle text-warning'> </span>";
+     }
+     else if($importa == Alta){
+     $importa ="<span class='icon-circle text-danger'> </span>";
+     }
+     $mensaje = $row["Mensaje"];
+     $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-lefth'><small>$importa $mensaje </small> </p><div class='dropdown-divider'></div></a>";
 
    }
 }
@@ -48,11 +58,8 @@ else{
           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#Modalcerrar" ><span class="icon-off-1"></span> Cerrar Sesion</a>
         </div>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><span class="icon-bell-alt"><?php echo $red; ?></span></a>
-      </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon-bell-alt"></span><?php echo $red; ?></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
         <?php echo $y; ?>
         </div>
