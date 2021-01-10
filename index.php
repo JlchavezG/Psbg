@@ -136,7 +136,7 @@
         </div>
      </div>
      <div class="container py-2">
-           <p class="text-center">IscjlchavezG@desarrollorWeb</p>
+           <p class="text-center"><a href="mailto:iscjlchavez@hotmail.com">IscjlchavezG@desarrollorWeb</a></p>
      </div>
   <script type="text/javascript">
   function verpass(cb){
