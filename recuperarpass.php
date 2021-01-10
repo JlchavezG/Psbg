@@ -21,7 +21,7 @@ if (isset($_POST['recuperar'])) {
                        <div class='row py-2'>
                           <input type='hidden' name='id' value='$id'>
                           <input type='hidden' name='email' value='$email'>
-                          <input type='password' class='caja' name='npass' placeholder='Nuevo password' requerid><br>
+                          <input type='password' class='form-control' name='npass' placeholder='Nuevo password' requerid><br>
                        </div>
                        <div class='row py-3'>
                          <input type='submit' name='guardar' value='Guardar nuevo password' class='btn-success btn-sm btn-block'>
@@ -57,10 +57,10 @@ if (isset($_POST['recuperar'])) {
                  <form class="form-group" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="py-2">
                    <div class="container">
                       <div class="row py-2">
-                        <input type="text" class="caja" name="usuario" placeholder="Usuario" required>
+                        <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
                       </div>
                       <div class="row py-2">
-                        <input type="email" class="caja" name="email" id="email" placeholder="Email" required>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                      </div>
                      <div class="row py-2">
                         <input type="submit" name="recuperar" value="Recuperar password" class="btn btn-success btn-sm btn-block">
