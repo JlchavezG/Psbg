@@ -50,16 +50,9 @@ if ($notificacion > 0) {
                                <?php $ff = $row['FechaN'];
                                 $new_date = date('d-m-Y', strtotime($ff));
                                 $importa = $row['Importancia'];
-                                if($importa == Baja){
-                                $importa ="<span class='icon-circle text-success'> </span>";
-                                }
-                                else if($importa == Media){
-                                $importa ="<span class='icon-circle text-warning'> </span>";
-                                }
-                                else if($importa == Alta){
-                                $importa ="<span class='icon-circle text-danger'> </span>";
-                                }
-
+                                if($importa == Baja){$importa ="<span class='icon-circle text-success'> </span>";}
+                                else if($importa == Media){$importa ="<span class='icon-circle text-warning'> </span>";}
+                                else if($importa == Alta){$importa ="<span class='icon-circle text-danger'> </span>";}
                                  ?>
                                <tr>
                                  <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
