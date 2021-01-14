@@ -88,8 +88,8 @@
      <div class="container py-4">
           <h3 class="text-center py-4"><span class="icon-users"></span> Inicio de Sesion</h3>
        <div class="row justify-content-center h-100 py-4">
-          <div class="card col-sm-8 col-md-6 col-lg-6 shadow-lg p-3 mb-5 bg-dark text-light rounded">
-               <p class="text-center text-light py-3"><span class="icon-lock"><span> Inicio de Sesión</p><hr>
+          <div class="card col-sm-8 col-md-6 col-lg-6 shadow-lg p-3 mb-5 bg-light text-dark rounded">
+               <p class="text-center text-dark py-3"><span class="icon-lock"><span> Inicio de Sesión</p><hr>
                <div class="container text-center">
                  <img src="img/logo-metal-iscjlchavezg.png" alt="logo-iscjlchavez" class="logo">
                  <div class="py-2">
