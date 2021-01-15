@@ -19,8 +19,8 @@ if (isset($_POST['recuperar'])) {
                   <div class='container'>
                     <form action='main/reperarpass.php' method='get'>
                        <div class='row py-2'>
-                          <input type='hidden' name='id' value='$id'>
-                          <input type='hidden' name='email' value='$email'>
+                          <input type='text' name='id' value='$id'>
+                          <input type='text' name='email' value='$email'>
                           <input type='password' class='form-control' name='npass' placeholder='Nuevo password' requerid><br>
                        </div>
                        <div class='row py-3'>
