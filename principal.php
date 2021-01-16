@@ -8,24 +8,26 @@ $usuario = $_SESSION['Usuario'];
 if (!isset($usuario)) {
    header("location:index.php");
 }
-// consulta para extraer todos los campo de el usuario en la sesion
-$Q= "SELECT * FROM Usuarios WHERE Usuario = '".$usuario."'";
-$extraer = $conecta->query($Q);
-$dupla = $extraer->fetch_array();
-if ($dupla > 0) {
-  $user = $dupla;
-  $on1 = $user['Id_Usuarios'];
-}
+else{
+  // configurar la zona horaria y sacar al hora de el servidor
+  ini_set('date.timezone','America/Mexico_City');
+  $fecha = date('Y-m-d');
+  $tiempo = date('H:i:s', time());
+  // consulta para extraer todos los campo de el usuario en la sesion
+  $Q= "SELECT * FROM Usuarios WHERE Usuario = '".$usuario."'";
+  $extraer = $conecta->query($Q);
+  $dupla = $extraer->fetch_array();
+  if ($dupla > 0) {
+    $user = $dupla;
+    $on1 = $user['Id_Usuarios'];
+  }
+  // INSERTAR datos en historial
+  $history = "INSERT INTO HistorialC(Id_UserC, Fecha, InicioH)VALUES('$on1','$fecha','$tiempo')";
+  $historye = $conecta->query($history);
 // actualizar campo de online
 $on = "UPDATE Usuarios SET Online = '1' WHERE Id_Usuarios = $on1";
 $line = $conecta->query($on);
-// configurar la zona horaria y sacar al hora de el servidor
-ini_set('date.timezone','America/Mexico_City');
-$fecha = date('Y-m-d');
-$tiempo = date('H:i:s', time());
-// INSERTAR datos en historial
-$history = "INSERT INTO HistorialC(Id_UserC, Fecha, InicioH)VALUES('$on1','$fecha','$tiempo')";
-$historye = $conecta->query($history);// validacion de expirar sesion por tiempo
+// validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
    $inactivo = 300; // 5 minutos
@@ -43,6 +45,7 @@ if (isset($_SESSION['time'])) {
      header("location:index.php");
      exit();
    }
+}
 }
 $_SESSION['time'] = time();
 
