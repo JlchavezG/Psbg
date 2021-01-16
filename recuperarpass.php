@@ -3,7 +3,7 @@ error_reporting(0);
 // incluimos la coneccion
 include 'main/conecta.php';
 // validar que se presione el boton restablecer
-if (isset($_POST['recuperar'])) {
+if(isset($_POST['recuperar'])) {
   // recuparar los datos de la caje de usuario
   $rusuario = $conecta->real_escape_string($_POST['usuario']);
   $remail = $conecta->real_escape_string($_POST['email']);
@@ -19,8 +19,8 @@ if (isset($_POST['recuperar'])) {
                   <div class='container'>
                     <form action='main/reperarpass.php' method='get'>
                        <div class='row py-2'>
-                          <input type='text' name='id' value='$id'>
-                          <input type='text' name='email' value='$email'>
+                          <input type='hidden' name='id' value='$id'>
+                          <input type='hidden' name='email' value='$email'>
                           <input type='password' class='form-control' name='npass' placeholder='Nuevo password' requerid><br>
                        </div>
                        <div class='row py-3'>
