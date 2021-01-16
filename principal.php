@@ -21,10 +21,11 @@ $on = "UPDATE Usuarios SET Online = '1' WHERE Id_Usuarios = $on1";
 $line = $conecta->query($on);
 // configurar la zona horaria y sacar al hora de el servidor
 ini_set('date.timezone','America/Mexico_City');
+$fecha = date('Y-m-d');
 $tiempo = date('H:i:s', time());
-
 // INSERTAR datos en historial
-
+$history = "INSERT INTO HistorialC(Id_UserC, Fecha, InicioH, FinalH)VALUES('$on1','$fecha','$tiempo','$tiempo')";
+$historye = $conecta->query($history);
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion

@@ -21,7 +21,7 @@
         // consulta para ingresar al sistema y determinar la variable de session
         $q = "SELECT * FROM Usuarios WHERE Usuario = '$usuario' and Password = '$password' and Estado = 'Activo'";
         // comparo que los datos se encuentren y se guarden en las variables userok y passwordok
-        if ($resultado = $conecta->query($q)) {
+        if($resultado = $conecta->query($q)) {
           while ($row = $resultado->fetch_array()) {
             $userok = $row['Usuario'];
             $passwordok = $row['Password'];
