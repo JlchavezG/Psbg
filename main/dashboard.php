@@ -151,16 +151,5 @@
           <p class="text-center">IscjlchavezG@desarrollorWeb</p>
     </div>
        <!-- temina firma -->
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </div>
