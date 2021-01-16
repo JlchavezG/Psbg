@@ -20,7 +20,8 @@ if ($numero > 0) {
      $importa ="<span class='icon-circle text-danger'> </span>";
      }
      $mensaje = $row["Mensaje"];
-     $y.="<a href='Notificaciones.php' class='nav-link'><p class='text-muted text-lefth'><small>$importa $mensaje </small> </p><div class='dropdown-divider'></div></a>";
+     $idnotifica = $row["Id_Notificacion"];
+     $y.="<a href='Notificaciones.php?Id_Notificación=$idnotifica' class='nav-link'><p class='text-muted text-lefth'><small>$importa $mensaje </small> </p><div class='dropdown-divider'></div></a>";
 
    }
 }
