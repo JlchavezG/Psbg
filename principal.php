@@ -24,9 +24,8 @@ ini_set('date.timezone','America/Mexico_City');
 $fecha = date('Y-m-d');
 $tiempo = date('H:i:s', time());
 // INSERTAR datos en historial
-$history = "INSERT INTO HistorialC(Id_UserC, Fecha, InicioH, FinalH)VALUES('$on1','$fecha','$tiempo','$tiempo')";
-$historye = $conecta->query($history);
-// validacion de expirar sesion por tiempo
+$history = "INSERT INTO HistorialC(Id_UserC, Fecha, InicioH)VALUES('$on1','$fecha','$tiempo')";
+$historye = $conecta->query($history);// validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
    $inactivo = 300; // 5 minutos
