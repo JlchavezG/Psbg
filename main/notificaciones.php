@@ -47,6 +47,12 @@ if ($notificacion > 0) {
                               </tr>
                             </thead>
                             <tbody>
+                                <?php
+                                  // verificar si se vio la notificacion
+                                  $leer = $row['Opc'];
+                                  if ($leer == '0') {$opc.="<span class='icon-cancel text-danger'></span>";}
+                                  else{$opc.="<span class='icon-ok text-success'></span>";}
+                               ?>
                                <?php while($row = $not->fetch_assoc()){ ?>
                                <?php $ff = $row['FechaN'];
                                 $new_date = date('d-m-Y', strtotime($ff));
@@ -59,12 +65,6 @@ if ($notificacion > 0) {
                                  <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $new_date; ?></td>
-                                 <?php
-                                 // verificar si se vio la notificacion
-                                 $leer = $row['Opc'];
-                                 if ($leer == '0') {$opc.="<span class='icon-cancel text-danger'></span>";}
-                                 else{$opc.="<span class='icon-ok text-success'></span>";}
-                                 ?>
                                  <td class="text-center"><?php echo $opc; ?></td>
                                  <td><div class="text-center">
                                     <a href="#" class="text-decoration-none text-muted"><span class="icon-trash"></span></a>
