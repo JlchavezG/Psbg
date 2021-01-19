@@ -54,15 +54,17 @@ if ($notificacion > 0) {
                                 if($importa == Baja){$importa ="<span class='icon-circle text-success'> </span>";}
                                 else if($importa == Media){$importa ="<span class='icon-circle text-warning'> </span>";}
                                 else if($importa == Alta){$importa ="<span class='icon-circle text-danger'> </span>";}
-                                // verificar si se vio la notificacion
-                                $leer = $row['Opc'];
-                                if ($leer == '0') {$opc.="<span class='icon-cancel text-danger'></span>";}
-                                else{$opc.="<span class='icon-ok text-success'></span>";}
                                  ?>
                                <tr>
                                  <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $new_date; ?></td>
+                                 <?php
+                                 // verificar si se vio la notificacion
+                                 $leer = $row['Opc'];
+                                 if ($leer == '0') {$opc.="<span class='icon-cancel text-danger'></span>";}
+                                 else{$opc.="<span class='icon-ok text-success'></span>";}
+                                 ?>
                                  <td class="text-center"><?php echo $opc; ?></td>
                                  <td><div class="text-center">
                                     <a href="#" class="text-decoration-none text-muted"><span class="icon-trash"></span></a>
