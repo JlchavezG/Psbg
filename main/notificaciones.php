@@ -16,6 +16,7 @@ $impor = $conecta->real_escape_string($_POST['Importancia']);
 $mensaje = $conecta->real_escape_string($_POST['Mansaje']);
 $fecha = date('Y/m/d');
 $Opc = '0';
+// consulta pera ver Notificaciones
 // consulta para insertar notificacion
 $noti = "INSERT INTO Notificaciones(Id_User1, Id_User2, Importancia, Mensaje, FechaN, Opc)VALUES('$user1','$user2','$impor','$mensaje','$fecha','$Opc')";
 $notificacion = $conecta->query($noti);
