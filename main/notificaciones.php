@@ -4,7 +4,7 @@ $datos = "SELECT * FROM Usuarios";
 $dato = $conecta->query($datos);
 // consulta de notificaciones para el usuario en cuestion
 $u = $user['Id_Usuarios'];
-$n = "SELECT * FROM Notificaciones WHERE Id_User2 = $u and Opc= '0' LIMIT 10";
+$n = "SELECT * FROM Notificaciones WHERE Id_User2 = $u LIMIT 10";
 $not = $conecta->query($n);
 $numero = $not->num_rows;
 // validacion de envio de informacion por medio de el boton notificar
@@ -42,6 +42,7 @@ if ($notificacion > 0) {
                                 <th scope="col">Importancia</th>
                                 <th scope="col">Mensaje</th>
                                 <th scope="col">Fecha</th>
+                                <th scope="col" class="text-center">Estado</th>
                                 <th scope="col">Opciones</tr>
                               </tr>
                             </thead>
@@ -53,11 +54,16 @@ if ($notificacion > 0) {
                                 if($importa == Baja){$importa ="<span class='icon-circle text-success'> </span>";}
                                 else if($importa == Media){$importa ="<span class='icon-circle text-warning'> </span>";}
                                 else if($importa == Alta){$importa ="<span class='icon-circle text-danger'> </span>";}
+                                // verificar si se vio la notificacion
+                                $leer = $row['Opc'];
+                                if ($leer == '0') {$opc.="<span class='icon-cancel text-danger'></span>";}
+                                else{$opc.="<span class='icon-ok text-success'></span>";}
                                  ?>
                                <tr>
                                  <td><?php echo $importa; ?><?php echo $row['Importancia']; ?></td>
                                  <td><?php echo $row['Mensaje'];?></td>
                                  <td><?php echo $new_date; ?></td>
+                                 <td class="text-center"><?php echo $opc; ?></td>
                                  <td><div class="text-center">
                                     <a href="#" class="text-decoration-none text-muted"><span class="icon-trash"></span></a>
                                  </div></td>
