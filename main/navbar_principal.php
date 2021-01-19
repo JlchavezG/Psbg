@@ -21,7 +21,7 @@ if ($numero > 0) {
      }
      $mensaje = $row["Mensaje"];
      $idnotifica = $row["Id_Notificacion"];
-     $y.="<a href='CNotificaciones.php?Id_Notificación=$idnotifica' class='nav-link'><p class='text-muted text-lefth'><small>$importa $mensaje </small> </p><div class='dropdown-divider'></div></a>";
+     $y.="<a href='main/CNotificaciones.php?Id_Notificación=$idnotifica' class='nav-link'><p class='text-muted text-lefth'><small>$importa $mensaje </small> </p><div class='dropdown-divider'></div></a>";
 
    }
 }
