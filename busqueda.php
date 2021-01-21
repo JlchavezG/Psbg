@@ -19,7 +19,7 @@ if ($dupla > 0) {
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
-   $inactivo = 300; // 5 minutos
+   $inactivo = 900; // 15 minutos
    // se calcula el tiempo inactivo ene l aplicativo
    $tiempo = time() - $_SESSION['time'];
    // verificamos si el tiempo pasa lo establecido para cerrar la sesion y redirigir
@@ -32,19 +32,28 @@ if (isset($_SESSION['time'])) {
      header("location:index.php");
      exit();
    }
+
 }
 $_SESSION['time'] = time();
+$where = "";
+if(!empty($_POST)){
+  $valor = $_POST['busqueda'];
+  if(!empty($valor)){
+    $where = "WHERE Nombre LIKE '%$valor%'";
+  }
+}
 // consulta para extraer a los alumnos que tengan la carrera
-$idcarrera = $_POST['carrera'];
-$tabla = "SELECT * FROM Alumnos WHERE Id_Carrera = '$idcarrera'";
-$ej= $conecta->query($tabla);
+$busqueda = "SELECT * FROM Alumnos $where";
+$resultado = $conecta->query($busqueda);
+$fila = $resultado->num_rows;
 ?>
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
   <head>
     <!-- utilizar cdn -->
     <meta charset="utf-8">
-    <title> Inicio de Sistema | IscjlchavezG</title>
+    <title> Busqueda de Alumnos | IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -67,24 +76,54 @@ $ej= $conecta->query($tabla);
     <!-- incluir a hora navbar -->
     <?php include 'main/navbar_principal.php';?>
    <div class="container py-4">
-      <h4 class="text-center display-4 py-2"> Buscar</h4>
-         <div class="container">
-             <div class="container">
-                  <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                      <select class="form-control" name="carrera">
-                        <?php while($row = $resultado1->fetch_assoc()) {  ?>
-                         <option value="<?php echo $row['Id_Carrera ']; ?>"><?php echo $row['NombreC']; ?></option>
-                        <?php } ?>
-                        <input type="submit" name="consultat" value="consultar" class="btn btn-sm btn-success">
-                      </select>
-                  </form>
-                  
-             </div>
-         </div>
+      <p class="text-center">Busqueda de Alumnos</p>
+      <section class="principal">
+          <div class="form-1-2">
+              <label for="busqueda"> Buscar Por Apellido Paterno: </label>
+              <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar">
+                <div class="row col-sm-12 col-md-12 col-lg-12 py-4">
+                  <input type="submit" name="buscar" value="Buscar" class="btn btn-success btn-sm">
+                </div>
+              </form>
+              <?php if($resultado->num_rows>0){ ?>
+              <div class="table-responsive">
+                 <table class="table">
+                     <thead class="text-primary">
+                       <th>Nombre</th>
+                       <th>Apellido Paterno</th>
+                       <th>Apeliido Materno</th>
+                       <th>Fecha de Nacimiento</th>
+                       <th>Opciones</th>
+                     </thead>
+                     <tbody>
+                       <?php  while($row = $resultado->fetch_assoc()){?>
+                         <tr>
+                           <td><?php echo $row['Nombre']; ?></td>
+                           <td><?php echo $row['ApellidoP']; ?></td>
+                           <td><?php echo $row['ApellidoM']; ?></td>
+                           <td><?php echo $row['F_Nacimiento']; ?></td>
+                           <td><span class="icon-pencil"></span> - <span class="icon-trash"></span></td>
+                         </tr>
+                       <?php } ?>
+                     </tbody>
+                 </table>
+               <?php } else {?>
+                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                     <strong>Lo siento no hay datos</strong> Los parametros de busqueda no son correctos.
+                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                 </div>
+               <?php } ?>
+              </div>
+          </div>
+      </section>
     </div>
   </div>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/pace.js"></script>
+  <script src="js/buscar_alumno.js"></script>
   <script>
   $("#menu-toggle").click(function(e) {
     e.preventDefault();

@@ -1,7 +1,0 @@
-<?php
-$inner = "SELECT u.Id_Usuarios, u.Nombre, u.ApellidoP, u.ApellidoM, u.F_Nacimiento, u.Id_Genero, u.Telefono, u.Id_Plantel, u.Id_Tusuario, u.Email, u.Usuario,
-u.Password, u.Img, u.Estado, g.Id_Genero, g.NombreG, p.Id_Plantel, p.NombreP, t.Id_Tusuario, t.TNombre FROM Usuarios as u INNER JOIN Genero as g ON u.Id_Genero = g.Id_Genero
- INNER JOIN Plantel as p ON u.Id_Plantel = p.Id_Plantel INNER JOIN Tusuario as t ON u.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
-$join = $conecta->query($inner);
-$imprimir = $join->fetch_array()
- ?>

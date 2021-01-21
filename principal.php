@@ -30,7 +30,7 @@ $line = $conecta->query($on);
 // validacion de expirar sesion por tiempo
 if (isset($_SESSION['time'])) {
    // damos el timepo en segundo para determinar cuando expira la sesion
-   $inactivo = 300; // 5 minutos
+   $inactivo = 900; // 15 minutos
    // se calcula el tiempo inactivo en el aplicativo
    $tiempo = time() - $_SESSION['time'];
    // verificamos si el tiempo pasa lo establecido para cerrar la sesion y redirigir

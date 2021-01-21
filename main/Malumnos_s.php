@@ -19,7 +19,7 @@
      </div>
      <div class="col text-center">
        <!-- tarjetas -->
-       <div class="card bg-info mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
+       <a href="busqueda.php" class="text-decoration-none"><div class="card bg-info mb-3 shadow-lg p-3 mb-5 rounded" style="max-width: 540px;">
            <div class="row no-gutters">
               <div class="col-md-4">
                  <h3 class="display-4 text-light"><span class="icon-search"></span></h3>
@@ -31,7 +31,7 @@
                   </div>
              </div>
           </div>
-       </div>
+       </div></a>
        <!-- tarjetas -->
      </div>
   </div>
