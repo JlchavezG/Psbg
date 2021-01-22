@@ -43,7 +43,7 @@ if(!empty($_POST)){
   }
 }
 // consulta para extraer a los alumnos que tengan la carrera
-$busqueda = "SELECT * FROM Alumnos $where";
+$busqueda = "SELECT * FROM Alumnos $where LIMIT 20";
 $resultado = $conecta->query($busqueda);
 $fila = $resultado->num_rows;
 ?>
@@ -79,7 +79,7 @@ $fila = $resultado->num_rows;
       <p class="text-center">Busqueda de Alumnos</p>
       <section class="principal">
           <div class="form-1-2">
-              <label for="busqueda"> Buscar Por Apellido Paterno: </label>
+              <label for="busqueda"> Buscar Alumno por Nombre: </label>
               <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <input type="text" name="busqueda" id="busqueda" class="form-control" placeholder="Buscar">
                 <div class="row col-sm-12 col-md-12 col-lg-12 py-4">
@@ -87,14 +87,14 @@ $fila = $resultado->num_rows;
                 </div>
               </form>
               <?php if($resultado->num_rows>0){ ?>
-              <div class="table-responsive">
+              <div class="table-responsive table-hover">
                  <table class="table">
                      <thead class="text-primary">
-                       <th>Nombre</th>
-                       <th>Apellido Paterno</th>
-                       <th>Apeliido Materno</th>
-                       <th>Fecha de Nacimiento</th>
-                       <th>Opciones</th>
+                       <th class="text-center">Nombre</th>
+                       <th class="text-center">Apellido Paterno</th>
+                       <th class="text-center">Apeliido Materno</th>
+                       <th class="text-center">Fecha de Nacimiento</th>
+                       <th class="text-center">Opciones</th>
                      </thead>
                      <tbody>
                        <?php  while($row = $resultado->fetch_assoc()){?>
@@ -103,8 +103,7 @@ $fila = $resultado->num_rows;
                            <td><?php echo $row['ApellidoP']; ?></td>
                            <td><?php echo $row['ApellidoM']; ?></td>
                            <td><?php echo $row['F_Nacimiento']; ?></td>
-                           <td><span class="icon-pencil"></span> - <span class="icon-trash"></span></td>
-                         </tr>
+                           <td class="text-center"><span class="icon-print"></span></td>
                        <?php } ?>
                      </tbody>
                  </table>
