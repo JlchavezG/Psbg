@@ -68,7 +68,7 @@ if ($notificacion > 0) {
                                  <td><?php echo $new_date; ?></td>
                                  <td class="text-center"><?php echo $opc; ?></td>
                                  <td><div class="text-center">
-                                    <a href="#" class="text-decoration-none text-muted"><span class="icon-trash"></span></a>
+                                    <a href="main/borrar_notificacion.php?Id_Notificacion=<?php $row['Id_Notificacion']; ?>" class="text-decoration-none text-muted"><span class="icon-trash"></span></a>
                                  </div></td>
                               <?php } ?>
                             </tbody>
