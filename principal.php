@@ -48,7 +48,6 @@ if (isset($_SESSION['time'])) {
 }
 }
 $_SESSION['time'] = time();
-
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
