@@ -57,10 +57,10 @@ if(isset($_POST['recuperar'])) {
                  <form class="form-group" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post" class="py-2">
                    <div class="container">
                       <div class="row py-2">
-                        <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
+                        <input type="text" class="form-control" name="usuario"autocomplete="off placeholder="Usuario" required>
                       </div>
                       <div class="row py-2">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        <input type="email" class="form-control" name="email" autocomplete="off id="email" placeholder="Email" required>
                      </div>
                      <div class="row py-2">
                         <input type="submit" name="recuperar" value="Recuperar password" class="btn btn-success btn-sm btn-block">
